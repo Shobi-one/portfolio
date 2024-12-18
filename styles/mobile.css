@@ -1,0 +1,12 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #fdfdfd;
+    --primary: #0d0c0c;
+    background-color: var(--bg);
+    color: var(--primary);
+}
