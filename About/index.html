@@ -7,7 +7,7 @@
     <title>Portfolio - About Me</title>
     <!--CSS FILES-->
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
-    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="../styles/mobile.css">
     <link rel="stylesheet" href="styles/style.css">
 
     <!--FONTS-->
@@ -18,17 +18,20 @@
 
 <body>
     <header>
-        <nav>
-            <a href="../">Home</a>
-            <a href="./">About</a>
-            <a href="../Projects/">Projects</a>
-            <a href="../Contact/">Contact</a>
-        </nav>
-        <h1>About Me</h1>
-        <hr>
+        <div class="container portfolio-header">
+            <nav>
+                <a class="tab" href="../">Home</a>
+                <a class="tab" href="./">About</a>
+                <a class="tab" href="../Projects/">Projects</a>
+                <a class="tab" href="../Contact/">Contact</a>
+            </nav>
+            <h1>About Me</h1>
+            <hr>
+        </div>
     </header>
-    <main>
-        <section>
+
+    <main class="container">
+        <section class="card">
             <h2>Hello there! I'm Obi Verheyen</h2>
             <p>
                 I am a <strong>Software Developer</strong> and <strong>Game Developer</strong>, committed to bringing
@@ -39,30 +42,31 @@
             </p>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Education</h2>
             <p><strong>Current Program:</strong> Bachelor in Electronics-ICT, Odisee (2024)</p>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Job Experience</h2>
             <p><strong>Game Master:</strong> Zero Latency VR</p>
             <p><strong>Internship:</strong> System Administrator, Justitiepaleis, Belgium</p>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Other Skills</h2>
             <p>- Painting Dungeons and Dragons miniatures</p>
         </section>
     </main>
-    <footer>
-        <hr>
-        <p>&copy; 2024 Obi Verheyen |
-            <a href="../">Home</a> |
-            <a href="./">About</a> |
-            <a href="../Projects/">Projects</a> |
-            <a href="../Contact/">Contact</a>
-        </p>
+    
+    <footer class="footer">
+        <nav>
+            <a href="./" class="link">Home</a>
+            <a href="./About/" class="link">About</a>
+            <a href="./Projects/" class="link">Projects</a>
+            <a href="./Contact/" class="link">Contact</a>
+        </nav>
+        <p>&copy; 2024 Obi Verheyen</p>
     </footer>
 </body>
 
