@@ -5,8 +5,212 @@
 }
 
 :root {
-    --bg: #fdfdfd;
+    --bg: #e7e8e3;
     --primary: #0d0c0c;
+    --font-main: 'Red Hat Display', sans-serif;
+    --font-title: 'Lexend Giga', sans-serif;
+    --font-accent: 'Russo One', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
     background-color: var(--bg);
     color: var(--primary);
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 90%;
+    max-width: 75em;
+    margin: 0 auto;
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+
+.tab {
+    font-family: var(--font-accent);
+    font-size: 1.5em;
+    color: var(--primary);
+    text-decoration: none;
+    padding: 0.5em 1.5em;
+    border: 0.2em solid var(--primary);
+    background: #fff;
+    box-shadow: 0.25em 0.25em 0 var(--primary);
+    border-radius: 0.625em;
+    gap: 1.5em;
+    position: relative;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.tab::after {
+    position: absolute;
+    inset: 0;
+    transform: translate(0.3125em, 0.3125em);
+    z-index: -1;
+}
+
+.portfolio-header {
+    max-width: fit-content;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.portfolio-header h1, .portfolio-header h3 {
+    font-family: var(--font-title);
+    font-weight: 200;
+    font-size: 3em;
+}
+
+.portfolio-header h2 {
+    font-family: var(--font-accent);
+    margin: -0.2em;
+    font-size: 12em;
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-weight: 400;
+}
+
+
+.banner {
+    width: 100%;
+    height: 30em;
+    background: url(../assets/img/decor/animeIllustration.png) no-repeat center;
+    background-size: cover;
+    border: 0.25em solid var(--primary);
+    border-radius: 0.3125em;
+    margin: 2em 0 3em;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.banner p {
+    position: absolute;
+    right: 1em;
+    top: -1.5em;
+    font-size: 1.5em;
+    margin: 0;
+    text-align: right;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin: 1.5em 0;
+    padding: 1em;
+}
+
+.card {
+    background: #fff;
+    border: 0.25em solid var(--primary);
+    border-radius: 0.3125em;
+    box-shadow: 0.25em 0.25em 0 var(--primary);
+    padding: 1.25em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h4, a, p {
+    color: var(--primary);
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.card h4{
+    font-family: var(--font-title), sans-serif;
+    font-weight: 200;
+    font-size: 1.7em;
+}
+
+.links {
+    text-align: center;
+    margin: 3em 0;
+    padding: 1.25em;
+    border: 0.25em solid var(--primary);
+    border-radius: 0.625em;
+    background: linear-gradient(45deg, #f5f5f5, #e6e6e6);
+    box-shadow: 0.25em 0.25em 0 var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.links h2 {
+    font-family: var(--font-title);
+    font-size: 2em;
+    color: var(--primary);
+}
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    text-decoration: none;
+    color: var(--primary);
+    padding: 0.5em 1.25em;
+    border: 0.2em solid var(--primary);
+    border-radius: 0.3125em;
+    box-shadow: 0.125em 0.125em 0 var(--primary);
+    position: relative;
+}
+
+.link img {
+    width: 30px;
+    height: auto;
+}
+
+.footer {
+    text-align: center;
+    padding: 2.5em;
+    background: linear-gradient(45deg, #f5f5f5, #e6e6e6);
+    border: 0.25em solid var(--primary);
+    border-radius: 0.625em;
+    box-shadow: 0.25em 0.25em 0 var(--primary);
+    margin: 3em 0 0;
+    position: relative;
+}
+
+.footer p {
+    font-family: var(--font-accent);
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+    color: var(--primary);
+}
+
+.footer nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+h3 {
+    text-align: center;
+    font-family: var(--font-title), sans-serif;
+    font-weight: 200;
+    margin-bottom: 1.5em;
+    font-size: 3em;
 }

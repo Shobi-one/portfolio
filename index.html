@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,93 +15,102 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
-
 </head>
+
 <body>
     <header>
-        <nav>
-            <a href="./">Home</a>
-            <a href="./About/">About</a>
-            <a href="./Projects/">Projects</a>
-            <a href="./Contact/">Contact</a>
-        </nav>
-        <div>
-            <h1>Portfolio</h1>
-            <h2>OBI VERHEYEN</h2>
-            <p>Software Developer</p>
-            <p>Evergem</p>
+        <div class="portfolio-header">
+            <nav>
+                <a href="./" class="tab">Home</a>
+                <a href="./About/" class="tab">About</a>
+                <a href="./Projects/" class="tab">Projects</a>
+                <a href="./Contact/" class="tab">Contact</a>
+            </nav>
+            <div>
+                <h1>Portfolio</h1>
+                <h2 class="name">OBI VERHEYEN</h2>
+                <h3 class="subtitle">Software Developer</h3>
+            </div>
         </div>
     </header>
 
     <main>
-        <img src="./assets/img/decor/animeIllustration.png" alt="Anime Illustration">
-        <hr>
+        <section class="banner">
+            <p>EVERGEM</p>
+        </section>
+
         <h3>Latest Projects</h3>
-        <section>
-            <ul>
-                <li>
-                    <h4><a href="./Projects/Goodnight/">Goodnight</a></h4>
+        <section class="card-container">
+            <div class="card">
+                <a href="./Projects/Goodnight/" class="card-link">
+                    <h4>Goodnight</h4>
                     <p>A Unity 2D game where players navigate a dreamscape to uncover a mysterious story.</p>
-                </li>
-                <li>
-                    <h4><a href="./notFound/">GoldCore Framework</a></h4>
+                </a>
+            </div>
+            <div class="card">
+                <a href="./notFound/" class="card-link">
+                    <h4>GoldCore Framework</h4>
                     <p>A Unity framework designed to streamline game development with essential mechanics.</p>
-                </li>
-            </ul>
+                </a>
+            </div>
         </section>
 
-        <h3>School exercises</h3>
-        <section>
-            <ul>
-                <li>
-                    <h4><a href="./Projects/lab1/">Lab 1</a></h4>
-                    <p>This exercise was meant the show the basics on how to structure a website. No special tricks. Just the raw basics.</p>
-                </li>
-            </ul>
+        <h3>School Exercises</h3>
+        <section class="card-container">
+            <div class="card">
+                <a href="./Projects/lab1/" class="card-link">
+                    <h4>Lab 1</h4>
+                    <p>This exercise was meant to show the basics on how to structure a website. No special tricks. Just the raw basics.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="./Projects/lab2/" class="card-link">
+                    <h4>Lab 2</h4>
+                    <p>This exercise was meant to show the basics on how to add style to a website.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="./Projects/lab3/" class="card-link">
+                    <h4>Lab 3</h4>
+                    <p>TODO</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="./Projects/lab4/" class="card-link">
+                    <h4>Lab 4</h4>
+                    <p>TODO</p>
+                </a>
+            </div>
         </section>
 
-        <section>
-        <ul>
-            <li>
-                <h4><a href="./Projects/lab2/">Lab 2</a></h4>
-                <p>This exercise was meant the show the basics on how to add style to a website.</p>
-            </li>
-        </ul>
-        </section>
-
-        <hr>
-        <section>
+        <section class="links">
             <h2>You can also find me on</h2>
-            <a href="https://shobi-one.itch.io/" target="_blank">
-                <img src="./assets/img/links/itchio.png" alt="Itch.io Logo" style="width: 24px; height: 24px;">
-                Itch.io | 
-            </a>
-
-            <a href="https://github.com/Shobi-one" target="_blank">
-                <img src="./assets/img/links/github.png" alt="GitHub Logo" style="width: 24px; height: 24px;">
-                GitHub | 
-            </a>
-
-            <a href="https://x.com/Shobi_one" target="_blank">
-            <img src="./assets/img/links/x.png" alt="X Logo" style="width: 24px; height: 24px;">
-                X | 
-            </a>
-
-            <a href="https://www.linkedin.com/in/obi-verheyen/" target="_blank">
-                <img src="./assets/img/links/linkedin.png" alt="LinkedIn Logo" style="width: 24px; height: 24px;">
-                LinkedIn
-            </a>
+            <div class="links-container">
+                <a href="https://shobi-one.itch.io/" target="_blank" class="link">
+                    <img src="./assets/img/links/itchio.png" alt="Itch.io Logo">
+                </a>
+                <a href="https://github.com/Shobi-one" target="_blank" class="link">
+                    <img src="./assets/img/links/github.png" alt="GitHub Logo">
+                </a>
+                <a href="https://x.com/Shobi_one" target="_blank" class="link">
+                    <img src="./assets/img/links/x.png" alt="X Logo">
+                </a>
+                <a href="https://www.linkedin.com/in/obi-verheyen/" target="_blank" class="link">
+                    <img src="./assets/img/links/linkedin.png" alt="LinkedIn Logo">
+                </a>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <hr>
-        <p>&copy; 2024 Obi Verheyen | 
-            <a href="./">Home</a> | 
-            <a href="./About/">About</a> | 
-            <a href="./Projects/">Projects</a> | 
-            <a href="./Contact/">Contact</a>
-        </p>        
+    <footer class="footer">
+        <nav>
+            <a href="./" class="link">Home</a>
+            <a href="./About/" class="link">About</a>
+            <a href="./Projects/" class="link">Projects</a>
+            <a href="./Contact/" class="link">Contact</a>
+        </nav>
+        <p>&copy; 2024 Obi Verheyen</p>
     </footer>
+    
 </body>
 </html>
