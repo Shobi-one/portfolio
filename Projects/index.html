@@ -4,53 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Projects Page</title>
+    <!--CSS FILES-->
+    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
+    <link rel="stylesheet" href="../styles/mobile.css">
+    <link rel="stylesheet" href="styles/style.css">
+    
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="../../">Home</a>
-            <a href="../About/">About</a>
-            <a href="./">Projects</a>
-            <a href="../Contact/">Contact</a>
-        </nav>
-        <h1>Projects</h1>
+        <div class="container portfolio-header">
+            <nav>
+                <a class="tab" href="../">Home</a>
+                <a class="tab" href="../About/">About</a>
+                <a class="tab" href="./">Projects</a>
+                <a class="tab" href="../Contact/">Contact</a>
+            </nav>
+            <h1>Projects</h1>
+            <hr>
+        </div>
     </header>
-    <main>
-        <hr>
+
+    <main class="container">
         <h2>Personal Projects</h2>
-        <section>
+        <section class="card">
             <h3><a href="./Goodnight/">Goodnight</a></h3>
             <p>A Unity 2D game where players navigate a dreamscape to uncover a mysterious story.</p>
-            <img src="../../assets/img/goodnight/goodnight1.png" alt="Goodnight Screenshot 1" width="300">
-            <img src="../../assets/img/goodnight/goodnight2.png" alt="Goodnight Screenshot 2" width="300">
+            <div class="image-scroll">
+                <img src="../assets/img/goodnight/goodnight1.png" alt="Goodnight Screenshot 1" width="300">
+                <img src="../assets/img/goodnight/goodnight2.png" alt="Goodnight Screenshot 2" width="300">
+            </div>
         </section>
         
-        <section>
+        <section class="card">
             <h3><a href="../notFound/">Goldcore</a></h3>
             <p>A Unity framework designed to streamline game development. GoldCore provides essential mechanics to make game development and rapid prototyping easier.</p>
-            <img src="../../assets/img/goldcore/goldcore1.png" alt="GoldCore Screenshot 1" width="300">
-            <img src="../../assets/img/goldcore/goldcore2.png" alt="GoldCore Screenshot 2" width="300">
+            <div class="image-scroll">
+                <img src="../assets/img/goldcore/goldcore1.png" alt="GoldCore Screenshot 1" width="300">
+                <img src="../assets/img/goldcore/goldcore2.png" alt="GoldCore Screenshot 2" width="300">
+            </div>
         </section>
 
         <h2>School exercises</h2>
-        <section>
+        <section class="card">
             <h3><a href="./lab1/">Lab 1</a></h3>
             <p>This exercise was meant the show the basics on how to structure a website. No special tricks. Just the raw basics.</p>
         </section>
 
-        <section>
+        <section class="card">
             <h3><a href="./lab2/">Lab 2</a></h3>
+            <p>This exercise was meant the show the basics on how to add style to a website.</p>
+        </section class="card">
+
+        <section class="card">
+            <h3><a href="./lab3/">Lab 3</a></h3>
+            <p>This exercise was meant the show the basics on how to add style to a website.</p>
+        </section>
+
+        <section class="card">
+            <h3><a href="./lab4/">Lab 4</a></h3>
             <p>This exercise was meant the show the basics on how to add style to a website.</p>
         </section>
     </main>
-    <footer>
-        <hr>
-        <p>&copy; 2024 Obi Verheyen | 
-            <a href="../../">Home</a> |
-            <a href="../About/">About</a> |
-            <a href="./">Projects</a> |
-            <a href="../Contact/">Contact</a>
-        </p>        
+    <footer class="footer">
+        <nav>
+            <a href="../" class="link">Home</a>
+            <a href="../About/" class="link">About</a>
+            <a href="./" class="link">Projects</a>
+            <a href="../Contact/" class="link">Contact</a>
+        </nav>
+        <p>&copy; 2024 Obi Verheyen</p>
     </footer>
 </body>
 </html>

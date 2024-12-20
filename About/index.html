@@ -1,55 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - About Me</title>
+    <!--CSS FILES-->
+    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
+    <link rel="stylesheet" href="../styles/mobile.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <nav>
-            <a href="../">Home</a>
-            <a href="./">About</a>
-            <a href="../Projects/">Projects</a>
-            <a href="../Contact/">Contact</a>
-        </nav>
-        <h1>About Me</h1>
-        <hr>
+        <div class="container portfolio-header">
+            <nav>
+                <a class="tab" href="../">Home</a>
+                <a class="tab" href="./">About</a>
+                <a class="tab" href="../Projects/">Projects</a>
+                <a class="tab" href="../Contact/">Contact</a>
+            </nav>
+            <h1>About Me</h1>
+            <hr>
+        </div>
     </header>
-    <main>
-        <section>
+
+    <main class="container">
+        <section class="card">
             <h2>Hello there! I'm Obi Verheyen</h2>
             <p>
-                I am a <strong>Software Developer</strong> and <strong>Game Developer</strong>, committed to bringing ideas to life. My journey revolves around building engaging software and gaming experiences! <br>
-                As a student specializing in <strong>Electronics-ICT</strong> at Odisee, I’ve developed strong skills in programming. <br>
+                I am a <strong>Software Developer</strong> and <strong>Game Developer</strong>, committed to bringing
+                ideas to life. My journey revolves around building engaging software and gaming experiences!
+                As a student specializing in <strong>Electronics-ICT</strong> at Odisee, I’ve developed strong skills in
+                programming.
                 Let’s work together to build something amazing!
             </p>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Education</h2>
             <p><strong>Current Program:</strong> Bachelor in Electronics-ICT, Odisee (2024)</p>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Job Experience</h2>
             <p><strong>Game Master:</strong> Zero Latency VR</p>
             <p><strong>Internship:</strong> System Administrator, Justitiepaleis, Belgium</p>
         </section>
 
-        <section>
+        <section class="card">
             <h2>Other Skills</h2>
             <p>- Painting Dungeons and Dragons miniatures</p>
         </section>
     </main>
-    <footer>
-        <hr>
-        <p>&copy; 2024 Obi Verheyen | 
-            <a href="../">Home</a> |
-            <a href="./">About</a> |
-            <a href="../Projects/">Projects</a> |
-            <a href="../Contact/">Contact</a>
-        </p>
+    
+    <footer class="footer">
+        <nav>
+            <a href="../" class="link">Home</a>
+            <a href="./" class="link">About</a>
+            <a href="../Projects/" class="link">Projects</a>
+            <a href="../Contact/" class="link">Contact</a>
+        </nav>
+        <p>&copy; 2024 Obi Verheyen</p>
     </footer>
 </body>
+
 </html>

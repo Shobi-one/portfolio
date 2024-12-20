@@ -4,20 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Contact Me</title>
+
+    <!--CSS FILES-->
+<!--CSS FILES-->
+<link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
+<link rel="stylesheet" href="../styles/mobile.css">
+<link rel="stylesheet" href="styles/style.css">
+
+<!--FONTS-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <nav>
-            <a href="../">Home</a>
-            <a href="../About/">About</a>
-            <a href="../Projects/">Projects</a>
-            <a href="./">Contact</a>
-        </nav>
-        <h1>Contact</h1>
+        <div class="container portfolio-header">
+            <nav>
+                <a class="tab" href="../">Home</a>
+                <a class="tab" href="../About/">About</a>
+                <a class="tab" href="../Projects/">Projects</a>
+                <a class="tab" href="./">Contact</a>
+            </nav>
+            <h1>Contact</h1>
+        </div>
     </header>
-    <main>
-        <hr>
-        <section>
+
+    <main class="container">
+        <section class="card">
             <h2>Contact Form</h2>
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
@@ -46,37 +60,33 @@
         </section>
 
         <hr>
-        <section>
+        <section class="links">
             <h2>You can also find me on</h2>
-            <a href="https://shobi-one.itch.io/" target="_blank">
-                <img src="../assets/img/links/itchio.png" alt="Itch.io Logo" style="width: 24px; height: 24px;">
-                Itch.io | 
-            </a>
-
-            <a href="https://github.com/Shobi-one" target="_blank">
-                <img src="../assets/img/links/github.png" alt="GitHub Logo" style="width: 24px; height: 24px;">
-                GitHub | 
-            </a>
-
-            <a href="https://x.com/Shobi_one" target="_blank">
-            <img src="../assets/img/links/x.png" alt="X Logo" style="width: 24px; height: 24px;">
-                X | 
-            </a>
-
-            <a href="https://www.linkedin.com/in/obi-verheyen/" target="_blank">
-                <img src="../assets/img/links/linkedin.png" alt="LinkedIn Logo" style="width: 24px; height: 24px;">
-                LinkedIn
-            </a>
+            <div class="links-container">
+                <a href="https://shobi-one.itch.io/" target="_blank" class="link">
+                    <img src="../assets/img/links/itchio.png" alt="Itch.io Logo">
+                </a>
+                <a href="https://github.com/Shobi-one" target="_blank" class="link">
+                    <img src="../assets/img/links/github.png" alt="GitHub Logo">
+                </a>
+                <a href="https://x.com/Shobi_one" target="_blank" class="link">
+                    <img src="../assets/img/links/x.png" alt="X Logo">
+                </a>
+                <a href="https://www.linkedin.com/in/obi-verheyen/" target="_blank" class="link">
+                    <img src="../assets/img/links/linkedin.png" alt="LinkedIn Logo">
+                </a>
+            </div>
         </section>
     </main>
-    <footer>
-        <hr>
-        <p>&copy; 2024 Obi Verheyen | 
-            <a href="../">Home</a> |
-            <a href="../About/">About</a> |
-            <a href="../Projects/">Projects</a> |
-            <a href="./">Contact</a>
-        </p>        
+    
+    <footer class="footer">
+        <nav>
+            <a href="../" class="link">Home</a>
+            <a href="../About/" class="link">About</a>
+            <a href="../Projects/" class="link">Projects</a>
+            <a href="./" class="link">Contact</a>
+        </nav>
+        <p>&copy; 2024 Obi Verheyen</p>
     </footer>
 </body>
 </html>

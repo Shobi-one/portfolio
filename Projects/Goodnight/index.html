@@ -1,66 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goodnight Game - Project Page</title>
+    <!--CSS FILES-->
+    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
+    <link rel="stylesheet" href="../../styles/mobile.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <nav>
-            <a href="../../../">Home</a>
-            <a href="../../About/">About</a>
-            <a href="../">Projects</a>
-            <a href="../../Contact/">Contact</a>
-        </nav>
-        <h1>Goodnight</h1>
+        <div class="container portfolio-header">
+            <nav>
+                <a class="tab" href="../../">Home</a>
+                <a class="tab" href="../../About/">About</a>
+                <a class="tab" href="../">Projects</a>
+                <a class="tab" href="../../Contact/">Contact</a>
+            </nav>
+            <h1>Goodnight</h1>
+            <hr>
+        </div>
     </header>
-    <main>
-        <h2>Goals of the Game</h2>
-        <ul>
-            <li>Immerse players in a dreamscape with storytelling.</li>
-            <li>Offer a unique, narrative-driven experience with a focus on exploration.</li>
-        </ul>
-        
-        <h2>Description</h2>
-        <p>
-            Goodnight is a 2D Unity game that lets players to navigate dreamscapes filled with mystery. 
-            Players uncover a layered story as they explore various dreams, solving puzzles and uncovering forgotten memories.
-        </p>
-        
-        <h2>Inspiration</h2>
-        <p>
-            This game is heavily inspired by the RPG Maker game Yume Nikki with elements of Undertale.
-        </p>
 
-        <h2>Related Links</h2>
-        <p>
-            <a href="https://store.steampowered.com/app/650700/Yume_Nikki/">Yume Nikki</a><br>
-            <a href="https://store.steampowered.com/app/391540/Undertale/">Undertale</a>
-        </p>
+    <main class="container">
+        <section class="card">
+            <h2>Goals of the Game</h2>
+            <ul>
+                <li>Immerse players in a dreamscape with storytelling.</li>
+                <li>Offer a unique, narrative-driven experience with a focus on exploration.</li>
+            </ul>
+        </section>
 
-        <h2>Reflection</h2>
-        <h3>Wow!</h3>
-        <p>Coding went a lot smoother than expected.</p>
-        
-        <h3>Aaww!</h3>
-        <p>Creating sprites was challenging, art isn't really my strong suit yet.</p>
-        
-        <h3>Not sure?</h3>
-        <p>Still refining the game's pacing and testing stuff.</p>
+        <section class="card">
+            <h2>Description</h2>
+            <p>
+                Goodnight is a 2D Unity game that lets players to navigate dreamscapes filled with mystery.
+                Players uncover a layered story as they explore various dreams, solving puzzles and uncovering forgotten
+                memories.
+            </p>
+        </section>
 
-        <h2>Screenshots</h2>
-        <img src="../../../assets/img/goodnight/goodnight1.png" alt="Goodnight Screenshot 1" width="300">
-        <img src="../../../assets/img/goodnight/goodnight2.png" alt="Goodnight Screenshot 2" width="300">
-    </main>
-    <footer>
-        <hr>
-        <p>&copy; 2024 Obi Verheyen | 
-            <a href="../../../">Home</a> |
-            <a href="../../About/">About</a> |
-            <a href="../">Projects</a> |
-            <a href="../../Contact/">Contact</a>|
-        </p>        
+        <section class="card">
+            <h2>Inspiration</h2>
+            <p>
+                This game is heavily inspired by the RPG Maker game Yume Nikki with elements of Undertale.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Related Links</h2>
+            <p>
+                <a href="https://store.steampowered.com/app/650700/Yume_Nikki/">Yume Nikki</a><br>
+                <a href="https://store.steampowered.com/app/391540/Undertale/">Undertale</a>
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Reflection</h2>
+            <h3>Wow!</h3>
+            <p>Coding went a lot smoother than expected.</p>
+        </section>
+
+        <section class="card">
+            <h3>Aaww!</h3>
+            <p>Creating sprites was challenging, art isn't really my strong suit yet.</p>
+        </section>
+
+        <section class="card">
+            <h3>Not sure?</h3>
+            <p>Still refining the game's pacing and testing stuff.</p>
+        </section>
+
+        <section class="card">
+            <h3>Screenshots</h3>
+            <div class="image-scroll">
+                <img src="../../assets/img/goodnight/goodnight1.png" alt="Goodnight Screenshot 1" width="300">
+                <img src="../../assets/img/goodnight/goodnight2.png" alt="Goodnight Screenshot 2" width="300">
+            </div>
+        </section>
+
+    <footer class="footer">
+        <nav>
+            <a href="./" class="link">Home</a>
+            <a href="./About/" class="link">About</a>
+            <a href="./Projects/" class="link">Projects</a>
+            <a href="./Contact/" class="link">Contact</a>
+        </nav>
+        <p>&copy; 2024 Obi Verheyen</p>
     </footer>
 </body>
+
 </html>
