@@ -28,7 +28,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.5em;
-    flex-wrap: wrap;
+    position: relative;
 }
 
 .container {
@@ -40,22 +40,22 @@ header {
 }
 
 .tab {
+    display: flex;
+    justify-content: center;
     font-family: var(--font-accent);
     font-size: 1.5em;
     color: var(--primary);
     text-decoration: none;
-    padding: 0.5em 1.5em;
     border: 0.2em solid var(--primary);
     background: #fff;
     box-shadow: 0.25em 0.25em 0 var(--primary);
     border-radius: 0.625em;
     gap: 1.5em;
-    position: relative;
     transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .tab::after {
-    position: absolute;
+    position: relative;
     inset: 0;
     transform: translate(0.3125em, 0.3125em);
     z-index: -1;
@@ -70,15 +70,17 @@ header {
 .portfolio-header h1, .portfolio-header h3 {
     font-family: var(--font-title);
     font-weight: 200;
-    font-size: 3em;
+    font-size: 2em;
+    position: relative;
 }
 
 .portfolio-header h2 {
     font-family: var(--font-accent);
     margin: -0.2em;
-    font-size: 12em;
+    font-size: 3em;
     transition: transform 0.3s ease, color 0.3s ease;
     font-weight: 400;
+    position: relative;
 }
 
 
@@ -203,8 +205,11 @@ header {
 .footer nav {
     display: flex;
     justify-content: center;
-    gap: 1.5em;
     flex-wrap: wrap;
+}
+
+h2 {
+    text-align: center;
 }
 
 h3 {
@@ -212,5 +217,26 @@ h3 {
     font-family: var(--font-title), sans-serif;
     font-weight: 200;
     margin-bottom: 1.5em;
-    font-size: 3em;
+    font-size: 2em;
+}
+
+.image-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 1em;
+    padding: 1em 0;
+    scroll-behavior: smooth;
+}
+
+.image-scroll img {
+    flex-shrink: 0;
+    border: 0.25em solid var(--primary);
+    border-radius: 0.3125em;
+    box-shadow: 0.25em 0.25em 0 var(--primary);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.image-scroll img:hover {
+    transform: scale(1.05);
+    box-shadow: 0.35em 0.35em 0 var(--primary);
 }
