@@ -208,11 +208,8 @@ header {
     flex-wrap: wrap;
 }
 
-h2 {
-    text-align: center;
-}
 
-h3 {
+h2, h3 {
     text-align: center;
     font-family: var(--font-title), sans-serif;
     font-weight: 200;
@@ -239,4 +236,87 @@ h3 {
 .image-scroll img:hover {
     transform: scale(1.05);
     box-shadow: 0.35em 0.35em 0 var(--primary);
+}
+
+label {
+    font-size: 1.2em;
+    font-family: var(--font-main);
+    color: var(--primary);
+    margin-bottom: 0.5em;
+    text-align: left;
+    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    font-size: 1em;
+    font-family: var(--font-main);
+    padding: 0.75em;
+    margin-bottom: 1.5em;
+    border: 0.2em solid var(--primary);
+    border-radius: 0.625em;
+    box-shadow: 0.25em 0.25em 0 var(--primary);
+    background-color: #fff;
+    color: var(--primary);
+    outline: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+}
+
+textarea {
+    resize: vertical;
+}
+
+h3 {
+    margin: 1em 0 0.5em;
+    font-size: 1.2em;
+}
+
+input[type="checkbox"] {
+    margin: 0 0.5em 1em 0;
+    transform: scale(1.2);
+    accent-color: var(--primary);
+}
+
+button[type="submit"] {
+    font-size: 1.2em;
+    font-family: var(--font-accent);
+    color: #fff;
+    background: var(--primary);
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 0.625em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0.25em 0.25em 0 var(--primary);
+    margin-top: 1em;
+}
+
+button[type="submit"]:hover {
+    background: #333;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 2em;
+    margin: 1em 0;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1em;
+    color: var(--primary);
+}
+
+li {
+    margin-bottom: 0.5em; 
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1em;
+    color: var(--primary);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }

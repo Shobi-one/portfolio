@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Lab2 Page</title>
+    <title>Lab 2 - Project Page</title>
     <!--CSS FILES-->
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
-    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="../../styles/mobile.css">
     <link rel="stylesheet" href="styles/style.css">
 
     <!--FONTS-->
@@ -20,49 +20,63 @@
 
 <body>
     <header>
-        <nav>
-            <a href="../../">Home</a>
-            <a href="../../About/">About</a>
-            <a href="../">Projects</a>
-            <a href="../../Contact/">Contact</a>
-        </nav>
-        <h1>Lab 2 - Basics of CSS</h1>
+        <div class="container portfolio-header">
+            <nav>
+                <a class="tab" href="../../">Home</a>
+                <a class="tab" href="../../About/">About</a>
+                <a class="tab" href="../">Projects</a>
+                <a class="tab" href="../../Contact/">Contact</a>
+            </nav>
+            <h1>Lab 2 Basic CSS</h1>
+            <hr>
+        </div>
     </header>
+
     <main>
         <a href="https://obiverheyen.ikdoeict.be/labo02/">My solution</a>
-        <h2>Goals of the exercise</h2>
-        <ul>
-            <li>Learning the basics of CSS.</li>
-            <li>Use of navigation inside a page</li>
-            <li>Adding custom fonts</li>
-        </ul>
+        <section class="card">
+            <h2>Goals of the exercise</h2>
+            <ul>
+                <li>Learning the basics of CSS.</li>
+                <li>Use of navigation inside a page</li>
+                <li>Adding custom fonts</li>
+            </ul>
+        </section>
 
-        <h2>Description</h2>
-        <p>
-            This exercise was meant the show the basics on how to add style to a website. Making use of ids and classes.
-        </p>
+        <section class="card">
+            <h2>Description</h2>
+            <p>
+                This exercise was meant the show the basics on how to add style to a website. Making use of ids and classes.
+            </p>
+        </section>
 
-        <h2>Related Links</h2>
-        <p>
-            <a href="https://www.w3schools.com/cssref/css_selectors.php">CSS Selectors</a><br>
-        </p>
+        <section class="card">
+            <h2>Related Links</h2>
+            <p>
+                <a href="https://www.w3schools.com/cssref/css_selectors.php">CSS Selectors</a><br>
+            </p>
+        </section>
 
-        <h2>Reflection</h2>
-        <h3>Wow!</h3>
-        <p>Coding went well! Didn't have many issues at all.</p>
+        <section class="card">
+            <h2>Reflection</h2>
+            <h3>Wow!</h3>
+            <p>Coding went well! Didn't have many issues at all.</p>
+        </section>
 
-        <h3>Aaww!</h3>
-        <p>I did forget how to call upon selectors wich I did need to look up again.</p>
+        <section class="card">
+            <h3>Aaww!</h3>
+            <p>I did forget how to call upon selectors wich I did need to look up again.</p>
+        </section>
 
     </main>
-    <footer>
-        <hr>
-        <p>&copy; 2024 Obi Verheyen |
-            <a href="../../">Home</a> |
-            <a href="../../About/">About</a> |
-            <a href="../">Projects</a> |
-            <a href="../../Contact/">Contact</a>
-        </p>
+    <footer class="footer">
+        <nav>
+            <a href="../../" class="link">Home</a>
+            <a href="../../About/" class="link">About</a>
+            <a href="../Projects/" class="link">Projects</a>
+            <a href="../../Contact/" class="link">Contact</a>
+        </nav>
+        <p>&copy; 2024 Obi Verheyen</p>
     </footer>
 </body>
 

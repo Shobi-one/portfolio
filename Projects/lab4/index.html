@@ -4,61 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Lab 4 Page</title>
-    <!-- CSS FILES -->
+    <title>Lab 4 - Project Page</title>
+    <!--CSS FILES-->
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
-    <link rel="stylesheet" href="styles/mobile.css">
+    <link rel="stylesheet" href="../../styles/mobile.css">
     <link rel="stylesheet" href="styles/style.css">
 
-    <!-- FONTS -->
+    <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <nav>
-            <a href="../../">Home</a>
-            <a href="../../About/">About</a>
-            <a href="../">Projects</a>
-            <a href="../../Contact/">Contact</a>
-        </nav>
-        <h1>Lab 4 - Responsive Web Design</h1>
+        <div class="container portfolio-header">
+            <nav>
+                <a class="tab" href="../../">Home</a>
+                <a class="tab" href="../../About/">About</a>
+                <a class="tab" href="../">Projects</a>
+                <a class="tab" href="../../Contact/">Contact</a>
+            </nav>
+            <h1>Responsive Web Design</h1>
+            <hr>
+        </div>
     </header>
+
     <main>
         <a href="https://obiverheyen.ikdoeict.be/labo04/">My solution</a>
+        <section class="card">
+            <h2>Goals of the exercise</h2>
+            <ul>
+                <li>Make a web page responsive</li>
+                <li>Apply media queries</li>
+                <li>Use responsive images</li>
+                <li>Scale elements with the viewport size</li>
+                <li>Style text effectively</li>
+                <li>Style buttons with appropriate color and contrast</li>
+            </ul>
+        </section>
 
-        <h2>Goals of the Exercise</h2>
-        <ul>
-            <li>Make a web page responsive</li>
-            <li>Apply media queries</li>
-            <li>Use responsive images</li>
-            <li>Scale elements with the viewport size</li>
-            <li>Style text effectively</li>
-            <li>Style buttons with appropriate color and contrast</li>
-        </ul>
+        <section class="card">
+            <h2>Description</h2>
+            <p>
+                This exercise focused on creating a responsive web page. Techniques such as media queries, responsive images, and viewport scaling were used to ensure the page adapts to different screen sizes. Additionally, attention was given to text styling and accessible button design.
+            </p>
+        </section>
 
-        <h2>Description</h2>
-        <p>
-            This exercise focused on creating a responsive web page. Techniques such as media queries, responsive images, and viewport scaling were used to ensure the page adapts to different screen sizes. Additionally, attention was given to text styling and accessible button design.
-        </p>
+        <section class="card">
+            <h2>Reflection</h2>
+            <h3>Wow!</h3>
+            <p>TLearning to use media queries and responsive images was exciting! Seeing how I'm used to using a framework.</p>
+        </section>
 
-        <h2>Reflection</h2>
-        <h3>Wow!</h3>
-        <p>Learning to use media queries and responsive images was exciting! Seeing how I'm used to using a framework. Seeing the page adapt to various screen sizes felt rewarding.</p>
+        <section class="card">
+            <h3>Aaww!</h3>
+            <p>Getting the flexbox right was a little annoying.</p>
+        </section>
 
-        <h3>Aww!</h3>
-        <p>Getting the flexbox right was a little annoying.</p>
     </main>
-    <footer>
-        <hr>
-        <p>&copy; 2024 Obi Verheyen |
-            <a href="../../">Home</a> |
-            <a href="../../About/">About</a> |
-            <a href="../">Projects</a> |
-            <a href="../../Contact/">Contact</a>
-        </p>
+    <footer class="footer">
+        <nav>
+            <a href="../../" class="link">Home</a>
+            <a href="../../About/" class="link">About</a>
+            <a href="../Projects/" class="link">Projects</a>
+            <a href="../../Contact/" class="link">Contact</a>
+        </nav>
+        <p>&copy; 2024 Obi Verheyen</p>
     </footer>
 </body>
 
