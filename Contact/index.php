@@ -32,6 +32,7 @@
 
     <main class="container">
         <section class="card">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
             <h2>Contact Form</h2>
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
