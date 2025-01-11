@@ -57,9 +57,10 @@ if (isset($_POST['btnSubmit'])) {
 
     // end of form check. If $allOk still is true, then the form was sent in correctly
     if ($allOk) {
+        $findMeString = implode(', ', $findMe);
         // build & execute prepared statement
-        $stmt = $db->prepare('INSERT INTO messages (sender, email, message, added_on) VALUES (?, ?, ?, ?)');
-        $stmt->execute(array($name, $email, $message, (new DateTime())->format('Y-m-d H:i:s')));
+        $stmt = $db->prepare('INSERT INTO messages (sender, email, message, found_on, added_on) VALUES (?, ?, ?, ?, ?)');
+        $stmt->execute(array($name, $email, $message, $findMeString, (new DateTime())->format('Y-m-d H:i:s')));
 
         // the query succeeded, redirect to this very same page
         if ($db->lastInsertId() !== 0) {
