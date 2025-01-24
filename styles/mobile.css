@@ -115,6 +115,14 @@ header {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.card-mini {
+    background: #fff;
+    border: 0.25em solid var(--primary);
+    border-radius: 0.3125em;
+    box-shadow: 0.25em 0.25em 0 var(--primary);
+    padding: 1.25em;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
 .card h4 {
     font-family: var(--font-title);
     font-weight: 200;
@@ -128,6 +136,7 @@ header {
     line-height: 1.4;
     text-align: center;
 }
+
 
 /* Links */
 .links {
@@ -237,7 +246,7 @@ input[type="text"], input[type="email"], textarea {
     border-radius: 0.625em;
     box-shadow: 0.25em 0.25em 0 var(--primary);
     background: #fff;
-    text-align: center;
+    text-align: left;
 }
 
 textarea {
@@ -347,11 +356,10 @@ a {
     }
 
     .card-container {
-        display: grid;
+        display: flex;
         justify-items: center;
         text-align: start;
         margin: 1.5em auto; 
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 1.5em;
         margin: 1.5em 0;
         padding: 1em;
