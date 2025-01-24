@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../../styles/mobile.css">
     <link rel="stylesheet" href="styles/style.css">
 
+    <!--BaguetteBox CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" />
+
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +32,13 @@
             </nav>
             <h1>Goodnight</h1>
             <hr>
+            <div class="button-wrapper">
+                <a class="button" href="https://moziak.itch.io/goodnight">Itch.io Page</a>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <a class="button" href="https://moziak.itch.io/goodnight">Itch.io Page</a>
         <section class="card">
             <h2>Goals of the Game</h2>
             <ul>
@@ -41,7 +46,6 @@
                 <li>Offer a unique, narrative-driven experience with a focus on exploration.</li>
             </ul>
         </section>
-
 
         <section class="card">
             <h2>Description</h2>
@@ -69,9 +73,13 @@
 
         <section class="card">
             <h3>Screenshots</h3>
-            <div class="image-scroll">
-                <img src="../../assets/img/goodnight/goodnight1.png" alt="Goodnight Screenshot 1" width="300">
-                <img src="../../assets/img/goodnight/goodnight2.png" alt="Goodnight Screenshot 2" width="300">
+            <div class="image-scroll baguetteBox">
+                <a href="../../assets/img/goodnight/goodnight1.png">
+                    <img src="../../assets/img/goodnight/goodnight1.png" alt="Goodnight Screenshot 1" width="300">
+                </a>
+                <a href="../../assets/img/goodnight/goodnight2.png">
+                    <img src="../../assets/img/goodnight/goodnight2.png" alt="Goodnight Screenshot 2" width="300">
+                </a>
             </div>
         </section>
     </main>
@@ -85,6 +93,12 @@
         </nav>
         <p>&copy; 2024 Obi Verheyen</p>
     </footer>
+
+    <!--BaguetteBox JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.baguetteBox');
+    </script>
 </body>
 
 </html>

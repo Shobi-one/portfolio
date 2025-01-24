@@ -102,6 +102,7 @@ if (isset($_POST['btnSubmit'])) {
                 <a class="tab" href="./">Contact</a>
             </nav>
             <h1>Contact</h1>
+            <hr>
         </div>
 </header>
 
@@ -118,7 +119,7 @@ if (isset($_POST['btnSubmit'])) {
         </div>
 
         <div>
-            <label for="name">Email:</label>
+            <label for="email">Email:</label>
             <input type="text" id="email" name="email" value="<?php echo htmlentities($email); ?>" class="input-text"/>
             <span class="message error"><?php echo $msgEmail; ?></span>
         </div>
@@ -160,6 +161,7 @@ if (isset($_POST['btnSubmit'])) {
 </section>
 
 <section class="links">
+    <h2>You can also find me on</h2>
             <div class="links-container">
                 <a href="https://shobi-one.itch.io/" target="_blank" class="link">
                     <img src="../assets/img/links/itchio.png" alt="Itch.io Logo">
