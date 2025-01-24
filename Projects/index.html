@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../styles/mobile.css">
     <link rel="stylesheet" href="styles/style.css">
     
+    <!--BaguetteBox CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" />
+
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,18 +36,18 @@
         <section class="card">
             <h3><a href="./Goodnight/">Goodnight</a></h3>
             <p>A Unity 2D game where players navigate a dreamscape to uncover a mysterious story.</p>
-            <div class="image-scroll">
-                <img src="../assets/img/goodnight/goodnight1.png" alt="Goodnight Screenshot 1" width="300">
-                <img src="../assets/img/goodnight/goodnight2.png" alt="Goodnight Screenshot 2" width="300">
+            <div class="image-scroll baguetteBox">
+                <a href="../assets/img/goodnight/goodnight1.png"><img src="../assets/img/goodnight/goodnight1.png" alt="Goodnight Screenshot 1" width="300"></a>
+                <a href="../assets/img/goodnight/goodnight2.png"><img src="../assets/img/goodnight/goodnight2.png" alt="Goodnight Screenshot 2" width="300"></a>
             </div>
         </section>
         
         <section class="card">
             <h3><a href="../notFound/">Goldcore</a></h3>
             <p>A Unity framework designed to streamline game development. GoldCore provides essential mechanics to make game development and rapid prototyping easier.</p>
-            <div class="image-scroll">
-                <img src="../assets/img/goldcore/goldcore1.png" alt="GoldCore Screenshot 1" width="300">
-                <img src="../assets/img/goldcore/goldcore2.png" alt="GoldCore Screenshot 2" width="300">
+            <div class="image-scroll baguetteBox">
+                <a href="../assets/img/goldcore/goldcore1.png"><img src="../assets/img/goldcore/goldcore1.png" alt="GoldCore Screenshot 1" width="300"></a>
+                <a href="../assets/img/goldcore/goldcore2.png"><img src="../assets/img/goldcore/goldcore2.png" alt="GoldCore Screenshot 2" width="300"></a>
             </div>
         </section>
 
@@ -68,6 +71,16 @@
             <h3><a href="./lab4/">Lab 4</a></h3>
             <p>This exercise was meant the show the basics on how to add style to a website.</p>
         </section>
+
+        <section class="card">
+            <h3><a href="./lab5/">Lab 5</a></h3>
+            <p>This exercise was used to make a proper contact form</p>
+        </section>
+
+        <section class="card">
+            <h3><a href="./lab6/">Lab 4</a></h3>
+            <p>This exercise focused on learning to use frameworks.</p>
+        </section>
     </main>
     <footer class="footer">
         <nav>
@@ -78,5 +91,11 @@
         </nav>
         <p>&copy; 2024 Obi Verheyen</p>
     </footer>
+
+    <!--BaguetteBox JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.baguetteBox');
+    </script>
 </body>
 </html>
