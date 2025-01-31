@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,22 +19,23 @@
 </head>
 
 <body>
+    <div class="page-load-animation"></div>
     <header>
         <div class="portfolio-header">
             <nav>
-                <a href="./" class="tab">Home</a>
-                <a href="./About/" class="tab">About</a>
-                <a href="./Projects/" class="tab">Projects</a>
-                <a href="./Contact/" class="tab">Contact</a>
+                <!-- Add data attributes for AOS animations -->
+                <a href="./" class="tab" data-aos="fade-down" data-aos-delay="200">Home</a>
+                <a href="./About/" class="tab" data-aos="fade-down" data-aos-delay="300">About</a>
+                <a href="./Projects/" class="tab" data-aos="fade-down" data-aos-delay="400">Projects</a>
+                <a href="./Contact/" class="tab" data-aos="fade-down" data-aos-delay="500">Contact</a>
             </nav>
             <div>
-                <h1>Portfolio</h1>
-                <h2 class="name">OBI VERHEYEN</h2>
-                <h3 class="subtitle">Software Developer</h3>
+                <h1 data-aos="zoom-in" data-aos-delay="600">Portfolio</h1>
+                <h2 class="name" data-aos="fade-up" data-aos-delay="700">OBI VERHEYEN</h2>
+                <h3 class="subtitle" data-aos="fade-up" data-aos-delay="800">Software Developer</h3>
             </div>
         </div>
     </header>
-
     <main>
         <div class="banner">
             <p>EVERGEM</p>
@@ -107,6 +109,22 @@
         </nav>
         <p>&copy; 2024 Obi Verheyen</p>
     </footer>
-    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out-cubic'
+        });
+
+        // Page load animation
+        window.addEventListener('load', () => {
+            document.querySelector('.page-load-animation').style.opacity = '0';
+            setTimeout(() => {
+                document.querySelector('.page-load-animation').remove();
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
