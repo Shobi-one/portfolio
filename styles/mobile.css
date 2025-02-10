@@ -12,6 +12,13 @@
     scroll-behavior: smooth;
 }
 
+[data-theme="dark"] {
+    --bg: #1a1a1a;
+    --primary: #e7e8e3;
+    --card-bg: #2d2d2d;
+    --link-hover: #ccc;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -21,6 +28,7 @@ body {
     background-color: var(--bg);
     color: var(--primary);
     font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 main {
@@ -58,7 +66,7 @@ header {
     box-shadow: 0.25em 0.25em 0 var(--primary);
     border-radius: 0.625em;
     gap: 1.5em;
-    transition: transform 0.2s, background 0.2s;
+    transition: transform 0.2s, background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 /* Portfolio Header */
@@ -367,6 +375,57 @@ a {
 .button:active {
     transform: translate(0.25em, 0.25em);
     box-shadow: 0em 0em 0 var(--primary);
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+#theme-toggle {
+    cursor: pointer;
+    border: 0.2em solid var(--primary);
+    background: var(--card-bg);
+    padding: 0.5em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-icon {
+    font-size: 1.2em;
+    transition: transform 0.3s;
+}
+
+.card, .card-mini, .links {
+    background-color: var(--card-bg);
+}
+
+[data-theme="dark"] .theme-icon {
+    transform: rotate(180deg);
+}
+
+[data-theme="dark"] .tab {
+    background: var(--card-bg);
+    color: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0.25em 0.25em 0 var(--primary);
+}
+
+[data-theme="dark"] .tab:hover {
+    background: var(--link-hover);
+    color: var(--bg);
+}
+
+[data-theme="dark"] .links{
+    background: var(--card-bg);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+[data-theme="dark"] footer {
+    background: var(--card-bg);
+    color: var(--primary);
+    border-color: var(--primary);
 }
 
 @media (min-width: 824px) {

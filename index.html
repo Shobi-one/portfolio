@@ -15,24 +15,33 @@
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="page-load-animation"></div>
+    <div class="manga-page-transition"></div>
     <header>
         <div class="portfolio-header">
             <nav>
-                <!-- Add data attributes for AOS animations -->
+                <button id="language-toggle" class="tab" data-aos="fade-down" data-aos-delay="100">
+                    <span class="language-label">NL</span>
+                </button>
                 <a href="./" class="tab" data-aos="fade-down" data-aos-delay="200">Home</a>
                 <a href="./About/" class="tab" data-aos="fade-down" data-aos-delay="300">About</a>
                 <a href="./Projects/" class="tab" data-aos="fade-down" data-aos-delay="400">Projects</a>
                 <a href="./Contact/" class="tab" data-aos="fade-down" data-aos-delay="500">Contact</a>
+                <button id="theme-toggle" class="tab" data-aos="fade-down" data-aos-delay="600"
+                    aria-label="Toggle theme">
+                    <img id="theme-icon" src="./assets/img/decor/moonIcon.png" alt="Theme Icon">
+                </button>
+
             </nav>
             <div>
-                <h1 data-aos="zoom-in" data-aos-delay="600">Portfolio</h1>
-                <h2 class="name" data-aos="fade-up" data-aos-delay="700">OBI VERHEYEN</h2>
-                <h3 class="subtitle" data-aos="fade-up" data-aos-delay="800">Software Developer</h3>
+                <h1 data-aos="zoom-in" data-aos-delay="700">Portfolio</h1>
+                <h2 class="name" data-aos="fade-up" data-aos-delay="800">OBI VERHEYEN</h2>
+                <h3 class="subtitle" data-aos="fade-up" data-aos-delay="900">Software Developer</h3>
             </div>
         </div>
     </header>
@@ -52,12 +61,13 @@
                 <p>A Unity framework designed to streamline game development with essential mechanics.</p>
             </a>
         </section>
-        
+
         <h3>School Exercises</h3>
         <section class="card-container-mini">
             <a href="./Projects/lab1/" class="card-mini card-link">
                 <h4>Lab 1</h4>
-                <p>This exercise was meant to show the basics on how to structure a website. No special tricks. Just the raw basics.</p>
+                <p>This exercise was meant to show the basics on how to structure a website. No special tricks. Just the
+                    raw basics.</p>
             </a>
             <a href="./Projects/lab2/" class="card-mini card-link">
                 <h4>Lab 2</h4>
@@ -125,6 +135,31 @@
                 document.querySelector('.page-load-animation').remove();
             }, 1000);
         });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const storedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+        function updateThemeIcon(theme) {
+            themeIcon.src = theme === 'dark' ? './assets/img/decor/sunIcon.png' : './assets/img/decor/moonIcon.png';
+        }
+
+        if (storedTheme) {
+            document.documentElement.setAttribute('data-theme', storedTheme);
+            updateThemeIcon(storedTheme);
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
     </script>
 </body>
+
 </html>
