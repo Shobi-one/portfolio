@@ -9,7 +9,15 @@
     --font-main: 'Red Hat Display', sans-serif;
     --font-title: 'Lexend Giga', sans-serif;
     --font-accent: 'Russo One', sans-serif;
+    --card-bg: #fff; /* Added for light theme */
     scroll-behavior: smooth;
+}
+
+[data-theme="dark"] {
+    --bg: #1a1a1a;
+    --primary: #e7e8e3;
+    --card-bg: #2d2d2d;
+    --link-hover: #ccc;
 }
 
 body {
@@ -21,6 +29,7 @@ body {
     background-color: var(--bg);
     color: var(--primary);
     font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 main {
@@ -58,7 +67,7 @@ header {
     box-shadow: 0.25em 0.25em 0 var(--primary);
     border-radius: 0.625em;
     gap: 1.5em;
-    transition: transform 0.2s, background 0.2s;
+    transition: transform 0.2s, background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 /* Portfolio Header */
@@ -267,6 +276,22 @@ h2, h3 {
     box-shadow: 0.35em 0.35em 0 var(--primary);
 }
 
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.tech-logos img {
+    max-width: 40px;
+    max-height: 40px;
+    width: auto;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
 /* Forms */
 label {
     font-size: 1.2em;
@@ -369,6 +394,57 @@ a {
     box-shadow: 0em 0em 0 var(--primary);
 }
 
+a:hover {
+    color: var(--link-hover);
+}
+
+#theme-toggle {
+    cursor: pointer;
+    border: 0.2em solid var(--primary);
+    background: var(--card-bg);
+    padding: 0.5em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-icon {
+    font-size: 1.2em;
+    transition: transform 0.3s;
+}
+
+.card, .card-mini, .links {
+    background-color: var(--card-bg);
+}
+
+[data-theme="dark"] .theme-icon {
+    transform: rotate(180deg);
+}
+
+[data-theme="dark"] .tab {
+    background: var(--card-bg);
+    color: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0.25em 0.25em 0 var(--primary);
+}
+
+[data-theme="dark"] .tab:hover {
+    background: var(--link-hover);
+    color: var(--bg);
+}
+
+[data-theme="dark"] .links{
+    background: var(--card-bg);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+[data-theme="dark"] footer {
+    background: var(--card-bg);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
 @media (min-width: 824px) {
     header {
         padding: .5em 4em;
@@ -390,7 +466,7 @@ a {
         text-decoration: none;
         border: 0.2em solid var(--primary);
         border-radius: 0.625em;
-        background: #fff;
+        background: var(--card-bg);
         box-shadow: 0.25em 0.25em 0 var(--primary);
         transition: transform 0.2s, background 0.2s;
     }
