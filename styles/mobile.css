@@ -275,6 +275,22 @@ h2, h3 {
     box-shadow: 0.35em 0.35em 0 var(--primary);
 }
 
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.tech-logos img {
+    max-width: 35px;
+    max-height: 35px;
+    width: auto;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
 /* Forms */
 label {
     font-size: 1.2em;
