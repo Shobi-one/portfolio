@@ -9,6 +9,7 @@
     --font-main: 'Red Hat Display', sans-serif;
     --font-title: 'Lexend Giga', sans-serif;
     --font-accent: 'Russo One', sans-serif;
+    --card-bg: #fff; /* Added for light theme */
     scroll-behavior: smooth;
 }
 
@@ -284,8 +285,8 @@ h2, h3 {
 }
 
 .tech-logos img {
-    max-width: 35px;
-    max-height: 35px;
+    max-width: 40px;
+    max-height: 40px;
     width: auto;
     height: auto;
     transition: transform 0.2s ease;
@@ -465,7 +466,7 @@ a:hover {
         text-decoration: none;
         border: 0.2em solid var(--primary);
         border-radius: 0.625em;
-        background: #fff;
+        background: var(--card-bg);
         box-shadow: 0.25em 0.25em 0 var(--primary);
         transition: transform 0.2s, background 0.2s;
     }
