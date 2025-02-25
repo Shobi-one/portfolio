@@ -18,6 +18,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap"
         rel="stylesheet">
+
+        <script>
+            (function() {
+                const storedTheme = localStorage.getItem('theme') || 
+                    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', storedTheme);
+            })();
+        </script>
+        
 </head>
 
 <body>

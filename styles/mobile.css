@@ -445,6 +445,7 @@ a:hover {
     border-color: var(--primary);
 }
 
+
 @media (min-width: 824px) {
     header {
         padding: .5em 4em;
@@ -533,5 +534,10 @@ a:hover {
         transform: translate(0.25em, 0.25em);
         box-shadow: 0em 0em 0 var(--primary);
     }
+
+    [data-theme="dark"] img {
+        filter: invert(1) hue-rotate(180deg);
+    }
+    
 }
 
