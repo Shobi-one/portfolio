@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goodnight Game - Project Page</title>
+    <title>Goodnight - Narrative Exploration Game | Obi Verheyen</title>
+    
     <!--CSS FILES-->
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="../../styles/mobile.css">
@@ -16,9 +17,19 @@
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
+    
+    <!--SEO Meta Tags-->
+    <meta name="description" content="Goodnight: A narrative-driven 2D exploration game inspired by Yume Nikki and Undertale. Uncover mysterious dreamscapes and forgotten memories.">
+    <meta name="keywords" content="game development, indie game, narrative game, unity game, dream exploration">
+
+    <script>
+        (function () {
+            const storedTheme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', storedTheme);
+        })();
+    </script>
 </head>
 
 <body>
@@ -33,52 +44,70 @@
             <h1>Goodnight</h1>
             <hr>
             <div class="button-wrapper">
-                <a class="button" href="https://moziak.itch.io/goodnight">Itch.io Page</a>
+                <a class="button" href="https://moziak.itch.io/goodnight" target="_blank" rel="noopener noreferrer">Play on Itch.io</a>
             </div>
         </div>
     </header>
 
     <main class="container">
         <section class="card">
-            <h2>Goals of the Game</h2>
+            <h2>Game Overview</h2>
+            <p>
+                Goodnight is an immersive 2D narrative exploration game developed in Unity. Dive into a surreal world of dreams, 
+                unraveling a deeply personal story through atmospheric exploration and subtle puzzle-solving.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Game Objectives</h2>
             <ul>
-                <li>Immerse players in a dreamscape with storytelling.</li>
-                <li>Offer a unique, narrative-driven experience with a focus on exploration.</li>
+                <li>Create an introspective journey through interconnected dreamscapes</li>
+                <li>Provide a unique, atmospheric narrative experience</li>
+                <li>Explore themes of memory, perception, and subconsciousness</li>
+                <li>Encourage player interpretation and emotional engagement</li>
             </ul>
         </section>
 
         <section class="card">
-            <h2>Description</h2>
+            <h2>Technical Details</h2>
+            <div class="tech-logos">
+                <img src="../../assets/img/tech-logos/unity-logo.png" alt="Unity" title="Unity">
+                <img src="../../assets/img/tech-logos/csharp-logo.png" alt="C#" title="C#">
+                <img src="../../assets/img/tech-logos/2d-logo.png" alt="2D Game" title="2D Game Development">
+            </div>
             <p>
-                Goodnight is a 2D Unity game that lets players to navigate dreamscapes filled with mystery.
-                Players uncover a layered story as they explore various dreams, solving puzzles and uncovering forgotten
-                memories.
+                Developed using Unity and C#, leveraging advanced storytelling techniques 
+                and minimalist game design principles to create an immersive experience.
             </p>
         </section>
 
         <section class="card">
-            <h2>Inspiration</h2>
+            <h2>Artistic Inspiration</h2>
             <p>
-                This game is heavily inspired by the RPG Maker game Yume Nikki with elements of Undertale.
+                Drawing inspiration from cult classics like Yume Nikki and Undertale, 
+                Goodnight explores narrative depth through environmental storytelling 
+                and symbolic game design.
             </p>
+            <div class="links-container">
+                <a href="https://store.steampowered.com/app/650700/Yume_Nikki/" class="link" target="_blank" rel="noopener noreferrer">
+                    <img src="../../assets/img/icons/steam-icon.png" alt="Steam">
+                    Yume Nikki
+                </a>
+                <a href="https://store.steampowered.com/app/391540/Undertale/" class="link" target="_blank" rel="noopener noreferrer">
+                    <img src="../../assets/img/icons/steam-icon.png" alt="Steam">
+                    Undertale
+                </a>
+            </div>
         </section>
 
         <section class="card">
-            <h2>Related Links</h2>
-            <p>
-                <a href="https://store.steampowered.com/app/650700/Yume_Nikki/">Yume Nikki</a><br>
-                <a href="https://store.steampowered.com/app/391540/Undertale/">Undertale</a>
-            </p>
-        </section>
-
-        <section class="card">
-            <h3>Screenshots</h3>
+            <h3>Game Screenshots</h3>
             <div class="image-scroll baguetteBox">
                 <a href="../../assets/img/goodnight/goodnight1.png">
-                    <img src="../../assets/img/goodnight/goodnight1.png" alt="Goodnight Screenshot 1" width="300">
+                    <img src="../../assets/img/goodnight/goodnight1.png" alt="Goodnight Dreamscape Screenshot" width="300">
                 </a>
                 <a href="../../assets/img/goodnight/goodnight2.png">
-                    <img src="../../assets/img/goodnight/goodnight2.png" alt="Goodnight Screenshot 2" width="300">
+                    <img src="../../assets/img/goodnight/goodnight2.png" alt="Goodnight Exploration Screenshot" width="300">
                 </a>
             </div>
         </section>

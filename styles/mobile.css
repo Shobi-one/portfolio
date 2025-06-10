@@ -211,22 +211,6 @@
     margin: 1.5em 0;
   }
   
-  .button:hover,
-  nav a:hover,
-  .card-mini:hover,
-  .link:hover {
-    background: #eaeaea;
-    transform: translate(0.1em, 0.1em);
-    box-shadow: 0.15em 0.15em 0 var(--primary);
-  }
-  
-  .button:active,
-  nav a:active,
-  .card-mini:active,
-  .link:active {
-    transform: translate(0.25em, 0.25em);
-    box-shadow: none;
-  }
   
   /* Tab Styling */
   .tab {
@@ -238,6 +222,25 @@
     font-size: 1.5em;
     color: var(--primary);
     gap: 1.5em;
+  }
+  
+  .button:hover,
+  nav a:hover,
+  .card-mini:hover,
+  .link:hover,
+  .tab:hover {
+    background: #eaeaea;
+    transform: translate(0.1em, 0.1em);
+    box-shadow: 0.15em 0.15em 0 var(--primary);
+  }
+  
+  .button:active,
+  nav a:active,
+  .card-mini:active,
+  .link:active, 
+  .tab:active {
+    transform: translate(0.25em, 0.25em);
+    box-shadow: none;
   }
   
   /* Banner */
