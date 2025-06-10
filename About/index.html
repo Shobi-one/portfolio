@@ -5,61 +5,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - About Me</title>
+
     <!--CSS FILES-->
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="../styles/mobile.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap"
+        rel="stylesheet">
+
+    <script>
+        (function () {
+            const storedTheme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', storedTheme);
+        })();
+    </script>
 </head>
 
 <body>
+    <div class="manga-page-transition"></div>
     <header>
-        <div class="container portfolio-header">
-            <nav>
-                <a class="tab" href="../">Home</a>
-                <a class="tab" href="./">About</a>
-                <a class="tab" href="../Projects/">Projects</a>
-                <a class="tab" href="../Contact/">Contact</a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" id="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="portfolio-header">
+            <nav id="menu-items" class="menu-closed">
+                <h4 class="menu-title">Navigation</h4>
+                <a href="../" class="tab" data-aos="fade-down" data-aos-delay="200">Home</a>
+                <a href="./" class="tab" data-aos="fade-down" data-aos-delay="300">About</a>
+                <a href="../Projects/" class="tab" data-aos="fade-down" data-aos-delay="400">Projects</a>
+                <a href="../Contact/" class="tab" data-aos="fade-down" data-aos-delay="500">Contact</a>
+                <button id="theme-toggle" class="tab" data-aos="fade-down" data-aos-delay="600"
+                    aria-label="Toggle theme">
+                    <img id="theme-icon" src="../assets/img/decor/moonIcon.png" alt="Theme Icon">
+                </button>
             </nav>
-            <h1>About Me</h1>
-            <hr>
+            <div>
+                <h1 data-aos="zoom-in" data-aos-delay="800">About Me</h1>
+                <h2 class="name" data-aos="fade-up" data-aos-delay="900">OBI VERHEYEN</h2>
+                <h3 class="subtitle" data-aos="fade-up" data-aos-delay="1000">Software Developer</h3>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <section class="card">
-            <h2>Hello there! I'm Obi Verheyen</h2>
-            <p>
-                I am a <strong>Software Developer</strong> and <strong>Game Developer</strong>, committed to bringing
-                ideas to life. My journey revolves around building engaging software and gaming experiences!
-                As a student specializing in <strong>Electronics-ICT</strong> at Odisee, I’ve developed strong skills in
-                programming.
-                Let’s work together to build something amazing!
-            </p>
+        <section class="panel" data-aos="fade-up" data-aos-delay="200">
+            <div class="profile-header">
+                <div class="profile-image"></div>
+                <div class="profile-content">
+                    <h2 class="section-title">Introduction</h2>
+                    <p class="intro-text">
+                        I am <span class="emphasis">Obi Verheyen</span>, a dedicated <span class="emphasis">Software Developer</span> 
+                        and <span class="emphasis">Game Developer</span> with a passion for creating innovative digital solutions. 
+                        Currently pursuing my Bachelor's degree in Electronics-ICT at Odisee University, I combine technical 
+                        expertise with creative problem-solving to deliver impactful projects.
+                    </p>
+                </div>
+            </div>
         </section>
 
-        <section class="card">
-            <h2>Education</h2>
-            <p><strong>Current Program:</strong> Bachelor in Electronics-ICT, Odisee (2024-???)</p>
-            <p><strong>Former Education:</strong> Informatica Managment, GO! Lyceum Gent (2022-2024)</p>
+        <section class="panel" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="section-title">Technical Expertise</h2>
+            
+            <div class="skill-grid">
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <ul class="skill-list">
+                        <li>C# / .NET</li>
+                        <li>JavaScript</li>
+                        <li>HTML5 & CSS3</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Development Tools</h4>
+                    <ul class="skill-list">
+                        <li>Unity Game Engine</li>
+                        <li>Visual Studio</li>
+                        <li>Git Version Control</li>
+                        <li>Database Management</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <section class="card">
-            <h2>Job Experience</h2>
-            <p><strong>Game Master:</strong> Zero Latency VR</p>
-            <p><strong>Internship:</strong> System Administrator, Justitiepaleis, Belgium</p>
+        <section class="panel" data-aos="fade-up" data-aos-delay="600">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - Present</div>
+                        <div class="timeline-title">Bachelor in Electronics-ICT</div>
+                        <p><strong>Odisee University of Applied Sciences</strong></p>
+                        <p>Specializing in advanced programming concepts, system design, and emerging technologies. 
+                        Focus on practical application of software development principles and modern development methodologies.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2024</div>
+                        <div class="timeline-title">Informatica Management</div>
+                        <p><strong>GO! Lyceum Gent</strong></p>
+                        <p>Comprehensive foundation in computer science principles, programming fundamentals, 
+                        and information systems management. Developed strong analytical and problem-solving skills.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="card">
-            <h2>Other Skills</h2>
-            <p>- Painting Dungeons and Dragons miniatures</p>
+        <section class="panel" data-aos="fade-up" data-aos-delay="800">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">Game Master</div>
+                        <p><strong>Zero Latency VR</strong></p>
+                        <p>Managed VR gaming experiences for diverse customer groups, ensuring optimal technical 
+                        performance and user engagement. Responsible for equipment maintenance, customer support, 
+                        and creating immersive gaming environments.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-title">System Administrator Intern</div>
+                        <p><strong>Justitiepaleis, Belgium</strong></p>
+                        <p>Gained hands-on experience in enterprise IT infrastructure management, network administration, 
+                        and system maintenance. Worked with critical government systems and learned industry best practices 
+                        for security and reliability.</p>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <section class="panel" data-aos="fade-up" data-aos-delay="1000">
+            <h2 class="section-title">Additional Skills & Interests</h2>
+            
+            <div class="highlight-box">
+                <h4>Creative Pursuits</h4>
+                <p><strong>Miniature Painting:</strong> Detailed painting of Dungeons & Dragons miniatures, 
+                demonstrating precision, patience, and artistic skill. This hobby enhances my attention to detail 
+                and creative problem-solving abilities.</p>
+            </div>
+            
+            <div class="skill-grid">
+                <div class="skill-category">
+                    <h4>Soft Skills</h4>
+                    <ul class="skill-list">
+                        <li>Problem Solving</li>
+                        <li>Team Collaboration</li>
+                        <li>Project Management</li>
+                        <li>Technical Communication</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <ul class="skill-list">
+                        <li>Dutch (Native)</li>
+                        <li>English (Fluent)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider" data-aos="fade-in">◆ ◇ ◆</div>
     </main>
-    
+
     <footer class="footer">
         <nav>
             <a href="../" class="link">Home</a>
@@ -69,6 +199,9 @@
         </nav>
         <p>&copy; 2024 Obi Verheyen</p>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../scripts/main.js"></script>
 </body>
 
 </html>

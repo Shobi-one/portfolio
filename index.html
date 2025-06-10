@@ -18,25 +18,38 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap"
         rel="stylesheet">
+
+    <script>
+        (function () {
+            const storedTheme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', storedTheme);
+        })();
+    </script>
+
 </head>
 
 <body>
     <div class="manga-page-transition"></div>
     <header>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" id="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
         <div class="portfolio-header">
-            <nav>
+            <nav id="menu-items" class="menu-closed">
+                <h4 class="menu-title">Navigation</h4>
                 <a href="./" class="tab" data-aos="fade-down" data-aos-delay="200">Home</a>
                 <a href="./About/" class="tab" data-aos="fade-down" data-aos-delay="300">About</a>
                 <a href="./Projects/" class="tab" data-aos="fade-down" data-aos-delay="400">Projects</a>
                 <a href="./Contact/" class="tab" data-aos="fade-down" data-aos-delay="500">Contact</a>
                 <button id="theme-toggle" class="tab" data-aos="fade-down" data-aos-delay="600"
                     aria-label="Toggle theme">
-                    <img id="theme-icon" src="./assets/img/decor/moonIcon.png" alt="Theme Icon">
+                    <img id="theme-icon" src="../assets/img/decor/moonIcon.png" alt="Theme Icon">
                 </button>
-                <button id="language-toggle" class="tab" data-aos="fade-down" data-aos-delay="700">
-                    <span class="language-label">NL</span>
-                </button>
-
             </nav>
             <div>
                 <h1 data-aos="zoom-in" data-aos-delay="800">Portfolio</h1>
@@ -68,14 +81,16 @@
                     <img src="./assets/img/tech/csharp.png" alt="C# Logo">
                 </div>
             </a>
-            <a href="./notFound/" class="card-mini card-link">
-                <h4>Marvel Rivals Randomizer</h4>
-                <p>A website that allows the user to roll for a random character, strategy, and bingo sheet for the game
-                    Marvel Rivals.</p>
+            <a href="./Projects/Goodnight/" class="card-mini card-link">
+                <h4>Find Our Friend</h4>
+                <p>Seemingly an innocent children's game gradually distorts into a horror experience.</p>
                 <div class="tech-logos">
+                    <img src="./assets/img/tech/unity.png" alt="Unity Logo">
+                    <img src="./assets/img/tech/csharp.png" alt="C# Logo">
                     <img src="./assets/img/tech/html.png" alt="HTML Logo">
                     <img src="./assets/img/tech/css.png" alt="CSS Logo">
                     <img src="./assets/img/tech/js.png" alt="JS Logo">
+
                 </div>
             </a>
         </section>
@@ -102,6 +117,8 @@
             </a>
         </section>
 
+        
+        <div class="divider" data-aos="fade-in">◆ ◇ ◆</div>
         <section class="links">
             <h2>You can also find me on</h2>
             <div class="links-container">
@@ -132,45 +149,7 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            easing: 'ease-out-cubic'
-        });
-
-        // Page load animation
-        window.addEventListener('load', () => {
-            document.querySelector('.page-load-animation').style.opacity = '0';
-            setTimeout(() => {
-                document.querySelector('.page-load-animation').remove();
-            }, 1000);
-        });
-
-        // Theme toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        const storedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-
-        function updateThemeIcon(theme) {
-            themeIcon.src = theme === 'dark' ? './assets/img/decor/sunIcon.png' : './assets/img/decor/moonIcon.png';
-        }
-
-        if (storedTheme) {
-            document.documentElement.setAttribute('data-theme', storedTheme);
-            updateThemeIcon(storedTheme);
-        }
-
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            updateThemeIcon(newTheme);
-        });
-
-    </script>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
