@@ -18,7 +18,12 @@ const themeIcon = document.getElementById('theme-icon');
 const storedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
 function updateThemeIcon(theme) {
-    themeIcon.src = theme === 'dark' ? './assets/img/decor/sunIcon.png' : './assets/img/decor/moonIcon.png';
+    // Get the current page path to determine the correct relative path
+    const currentPath = window.location.pathname;
+    const isInSubdirectory = currentPath.split('/').length > 2;
+    const basePath = isInSubdirectory ? '../' : './';
+    
+    themeIcon.src = theme === 'dark' ? `${basePath}assets/img/decor/sunIcon.png` : `${basePath}assets/img/decor/moonIcon.png`;
 }
 
 if (storedTheme) {
