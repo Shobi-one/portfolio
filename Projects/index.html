@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Projects Page</title>
+    
     <!--CSS FILES-->
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="../styles/mobile.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!--BaguetteBox CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
@@ -16,71 +18,147 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
+
+    <script>
+        (function () {
+            const storedTheme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', storedTheme);
+        })();
+    </script>
 </head>
 <body>
+    <div class="manga-page-transition"></div>
     <header>
-        <div class="container portfolio-header">
-            <nav>
-                <a class="tab" href="../">Home</a>
-                <a class="tab" href="../About/">About</a>
-                <a class="tab" href="./">Projects</a>
-                <a class="tab" href="../Contact/">Contact</a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" id="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="portfolio-header">
+            <nav id="menu-items" class="menu-closed">
+                <h4 class="menu-title">Navigation</h4>
+                <a href="../" class="tab" data-aos="fade-down" data-aos-delay="200">Home</a>
+                <a href="../About/" class="tab" data-aos="fade-down" data-aos-delay="300">About</a>
+                <a href="./" class="tab" data-aos="fade-down" data-aos-delay="400">Projects</a>
+                <a href="../Contact/" class="tab" data-aos="fade-down" data-aos-delay="500">Contact</a>
+                <button id="theme-toggle" class="tab" data-aos="fade-down" data-aos-delay="600"
+                    aria-label="Toggle theme">
+                    <img id="theme-icon" src="../assets/img/decor/moonIcon.png" alt="Theme Icon">
+                </button>
             </nav>
-            <h1>Projects</h1>
-            <hr>
+            <div>
+                <h1 data-aos="zoom-in" data-aos-delay="800">Projects</h1>
+                <h2 class="name" data-aos="fade-up" data-aos-delay="900">MY WORK</h2>
+                <h3 class="subtitle" data-aos="fade-up" data-aos-delay="1000">Portfolio Showcase</h3>
+            </div>
         </div>
     </header>
 
     <main class="container">
-        <h2>Personal Projects</h2>
-        <section class="card">
-            <h3><a href="./Goodnight/">Goodnight</a></h3>
-            <p>A Unity 2D game where players navigate a dreamscape to uncover a mysterious story.</p>
-            <div class="image-scroll baguetteBox">
-                <a href="../assets/img/goodnight/goodnight1.png"><img src="../assets/img/goodnight/goodnight1.png" alt="Goodnight Screenshot 1" width="300"></a>
-                <a href="../assets/img/goodnight/goodnight2.png"><img src="../assets/img/goodnight/goodnight2.png" alt="Goodnight Screenshot 2" width="300"></a>
-            </div>
+        <!-- Introduction Section -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="intro-text">
+                Explore my collection of <span class="emphasis">personal and academic projects</span>, 
+                showcasing my journey in <span class="emphasis">software development</span> and 
+                <span class="emphasis">game creation</span>. Each project represents a step forward 
+                in my learning and demonstrates my passion for creating innovative digital solutions.
+            </p>
         </section>
         
-        <section class="card">
-            <h3><a href="../notFound/">Goldcore</a></h3>
-            <p>A Unity framework designed to streamline game development. GoldCore provides essential mechanics to make game development and rapid prototyping easier.</p>
-            <div class="image-scroll baguetteBox">
-                <a href="../assets/img/goldcore/goldcore1.png"><img src="../assets/img/goldcore/goldcore1.png" alt="GoldCore Screenshot 1" width="300"></a>
-                <a href="../assets/img/goldcore/goldcore2.png"><img src="../assets/img/goldcore/goldcore2.png" alt="GoldCore Screenshot 2" width="300"></a>
+        <!-- Personal Projects Section -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="section-title">Personal Projects</h2>
+            <div class="projects-grid">
+                <!-- Goodnight Project -->
+                <article class="project-card featured" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-header">
+                        <div class="project-image">
+                            <img src="../assets/img/goodnight/goodnight1.png" alt="Goodnight Game Screenshot" class="main-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="./Goodnight/" class="project-link">View Project</a>
+                                    <a href="../assets/img/goodnight/goodnight1.png" class="gallery-link baguetteBox" data-caption="Goodnight Game Screenshot">Gallery</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-badge">Featured</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Goodnight</h3>
+                        <p class="project-description">A Unity 2D game where players navigate a dreamscape to uncover a mysterious story. Features atmospheric visuals and engaging gameplay mechanics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">2D Game Development</span>
+                        </div>
+                        <div class="project-gallery baguetteBox">
+                            <a href="../assets/img/goodnight/goodnight1.png" data-caption="Goodnight Gameplay Screenshot 1">
+                                <img src="../assets/img/goodnight/goodnight1.png" alt="Goodnight Screenshot 1">
+                            </a>
+                            <a href="../assets/img/goodnight/goodnight2.png" data-caption="Goodnight Gameplay Screenshot 2">
+                                <img src="../assets/img/goodnight/goodnight2.png" alt="Goodnight Screenshot 2">
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- GoldCore Project -->
+                <article class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-header">
+                        <div class="project-image">
+                            <img src="../assets/img/goldcore/goldcore1.png" alt="GoldCore Framework Screenshot" class="main-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="../notFound/" class="project-link">View Project</a>
+                                    <a href="../assets/img/goldcore/goldcore1.png" class="gallery-link baguetteBox" data-caption="GoldCore Framework">Gallery</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">GoldCore Framework</h3>
+                        <p class="project-description">A Unity framework designed to streamline game development. GoldCore provides essential mechanics to make game development and rapid prototyping easier.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Framework</span>
+                        </div>
+                        <div class="project-gallery baguetteBox">
+                            <a href="../assets/img/goldcore/goldcore1.png" data-caption="GoldCore Framework Overview">
+                                <img src="../assets/img/goldcore/goldcore1.png" alt="GoldCore Screenshot 1">
+                            </a>
+                            <a href="../assets/img/goldcore/goldcore2.png" data-caption="GoldCore Framework Features">
+                                <img src="../assets/img/goldcore/goldcore2.png" alt="GoldCore Screenshot 2">
+                            </a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <h2>School exercises</h2>
-        <section class="card">
-            <h3><a href="./lab1/">Lab 1</a></h3>
-            <p>This exercise was meant the show the basics on how to structure a website. No special tricks. Just the raw basics.</p>
+        <!-- Academic Projects Section -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="800">
+            <h2 class="section-title">Academic Projects</h2>
+            <div class="academic-projects">
+                <article class="academic-card" data-aos="fade-up" data-aos-delay="900">
+                    <div class="academic-content">
+                        <h3 class="academic-title">Lab 1 - Web Fundamentals</h3>
+                        <p class="academic-description">This exercise was meant to show the basics on how to structure a website. No special tricks. Just the raw basics.</p>
+                        <div class="academic-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <a href="./lab1/" class="academic-link">View Project</a>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <section class="card">
-            <h3><a href="./lab2/">Lab 2</a></h3>
-            <p>This exercise was meant the show the basics on how to add style to a website.</p>
-        </section>
-
-        <section class="card">
-            <h3><a href="./lab3/">Lab 3</a></h3>
-            <p>This exercise was meant the show the basics on how to add style to a website.</p>
-        </section>
-
-        <section class="card">
-            <h3><a href="./lab4/">Lab 4</a></h3>
-            <p>This exercise was meant the show the basics on how to add style to a website.</p>
-        </section>
-
-        <section class="card">
-            <h3><a href="./lab5/">Lab 5</a></h3>
-            <p>This exercise was used to make a proper contact form</p>
-        </section>
-
-        <section class="card">
-            <h3><a href="./lab6/">Lab 6</a></h3>
-            <p>This exercise focused on learning to use frameworks.</p>
-        </section>
+        <div class="divider" data-aos="fade-in">◆ ◇ ◆</div>
     </main>
     <footer class="footer">
         <nav>
@@ -92,10 +170,24 @@
         <p>&copy; 2024 Obi Verheyen</p>
     </footer>
 
-    <!--BaguetteBox JS-->
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src="../scripts/main.js"></script>
     <script>
-        baguetteBox.run('.baguetteBox');
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Initialize BaguetteBox
+        baguetteBox.run('.baguetteBox', {
+            animation: 'fadeIn',
+            noScrollbars: true
+        });
     </script>
 </body>
 </html>

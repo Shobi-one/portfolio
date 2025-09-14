@@ -1,0 +1,391 @@
+/* Introduction text styling */
+.intro-text {
+  font-size: 1.3em;
+  line-height: 1.6;
+  margin: 1.5em 0;
+  color: var(--primary);
+  text-align: center;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3em;
+  margin: 3em 0;
+}
+
+/* Project Cards */
+.project-card {
+  background: var(--card-bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-0.5em);
+  box-shadow: 0.5em 0.5em 0 var(--primary);
+}
+
+.project-card.featured {
+  border: 0.3em solid var(--primary);
+  box-shadow: 0.4em 0.4em 0 var(--primary);
+}
+
+.project-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .main-image {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-link,
+.gallery-link {
+  padding: 0.75em 1.5em;
+  background: var(--primary);
+  color: var(--card-bg);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-accent);
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  border: 0.2em solid var(--primary);
+}
+
+.project-link:hover,
+.gallery-link:hover {
+  background: transparent;
+  color: var(--primary);
+  transform: scale(1.05);
+}
+
+.project-badge {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background: var(--primary);
+  color: var(--card-bg);
+  padding: 0.5em 1em;
+  border-radius: var(--border-radius);
+  font-family: var(--font-accent);
+  font-size: 0.9em;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.project-content {
+  padding: 2em;
+}
+
+.project-title {
+  font-family: var(--font-title);
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 1em;
+  color: var(--primary);
+  text-align: center;
+}
+
+.project-description {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 1.5em;
+  color: var(--primary);
+  opacity: 0.9;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+  justify-content: center;
+}
+
+.tech-tag {
+  background: var(--primary);
+  color: var(--card-bg);
+  padding: 0.4em 0.8em;
+  border-radius: 1.5em;
+  font-size: 0.9em;
+  font-family: var(--font-accent);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: var(--card-bg);
+  color: var(--primary);
+  border: 0.1em solid var(--primary);
+  transform: scale(1.05);
+}
+
+.project-gallery {
+  display: flex;
+  gap: 1em;
+  overflow-x: auto;
+  padding: 1em 0;
+  justify-content: center;
+}
+
+.project-gallery img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border: var(--border);
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0.2em 0.2em 0 var(--primary);
+}
+
+/* Academic Projects */
+.academic-projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  margin: 2em 0;
+}
+
+.academic-card {
+  background: var(--bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.academic-card:hover {
+  transform: translateY(-0.3em);
+  box-shadow: 0.3em 0.3em 0 var(--primary);
+}
+
+.academic-content {
+  padding: 2em;
+}
+
+.academic-title {
+  font-family: var(--font-title);
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-bottom: 1em;
+  color: var(--primary);
+}
+
+.academic-description {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  color: var(--primary);
+  opacity: 0.9;
+}
+
+.academic-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.academic-link {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background: var(--primary);
+  color: var(--card-bg);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-accent);
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  border: 0.2em solid var(--primary);
+}
+
+.academic-link:hover {
+  background: transparent;
+  color: var(--primary);
+  transform: scale(1.05);
+}
+
+/* Section Titles - using existing mobile.css styles */
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+  }
+  
+  .academic-projects {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+  
+  .project-image {
+    height: 350px;
+  }
+  
+  .project-links {
+    flex-direction: row;
+  }
+  
+  .hero-description {
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4em;
+  }
+  
+  .academic-projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .project-image {
+    height: 400px;
+  }
+  
+  .section-title {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .projects-grid {
+    max-width: 1200px;
+    margin: 3em auto;
+  }
+  
+  .academic-projects {
+    max-width: 1200px;
+    margin: 3em auto;
+  }
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] .project-overlay {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+[data-theme="dark"] .academic-card {
+  background: var(--bg);
+}
+
+/* Fix image inversion in dark mode for project images */
+[data-theme="dark"] .main-image,
+[data-theme="dark"] .project-gallery img {
+  filter: none !important;
+}
+
+/* Animation Enhancements */
+.project-card,
+.academic-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar Styling */
+.project-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-gallery::-webkit-scrollbar-track {
+  background: var(--bg);
+  border-radius: 4px;
+}
+
+.project-gallery::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+.project-gallery::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+  opacity: 0.8;
+}
+
+/* Focus States for Accessibility */
+.project-link:focus,
+.gallery-link:focus,
+.academic-link:focus {
+  outline: 0.2em solid var(--primary);
+  outline-offset: 0.2em;
+}
+
+/* Print Styles */
+@media print {
+  .project-overlay,
+  .project-badge {
+    display: none;
+  }
+  
+  .project-card,
+  .academic-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 0.1em solid #000;
+  }
+}
