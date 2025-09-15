@@ -16,7 +16,7 @@
   --bg: #1a1a1a;
   --primary: #e7e8e3;
   --card-bg: #2d2d2d;
-  --link-hover: #9b9a9a;
+  --link-hover: #0d0c0c;
 }
 
 *,
@@ -768,6 +768,10 @@ body.menu-open .hamburger-menu {
 
 [data-theme="dark"] img {
   filter: invert(1) hue-rotate(180deg);
+}
+
+[data-theme="dark"] .card-mini:hover img, .link:hover img {
+  filter: none; /* back to normal colors */
 }
 
 #menu-items a,

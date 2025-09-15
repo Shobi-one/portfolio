@@ -190,45 +190,6 @@
     margin: 2em 0;
 }
 
-.primary-button,
-.secondary-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5em;
-    padding: 1em 2em;
-    font-family: var(--font-accent);
-    font-size: 1.1em;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    transition: all 0.3s ease;
-    border: 0.2em solid var(--primary);
-    min-width: 200px;
-    justify-content: center;
-}
-
-.primary-button {
-    background: var(--primary);
-    color: var(--card-bg);
-}
-
-.primary-button:hover {
-    background: transparent;
-    color: var(--primary);
-    transform: scale(1.05);
-}
-
-.secondary-button {
-    background: transparent;
-    color: var(--primary);
-}
-
-.secondary-button:hover {
-    background: var(--primary);
-    color: var(--card-bg);
-    transform: scale(1.05);
-}
-
 .button-icon {
     font-size: 1em;
 }
@@ -315,13 +276,6 @@
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Focus States for Accessibility */
-.primary-button:focus,
-.secondary-button:focus {
-    outline: 0.2em solid var(--primary);
-    outline-offset: 0.2em;
 }
 
 /* Print Styles */
