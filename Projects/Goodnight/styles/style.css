@@ -292,6 +292,12 @@
     background: rgba(0, 0, 0, 0.9);
 }
 
+[data-theme="dark"] .main-screenshot,
+[data-theme="dark"] .gallery-item img {
+  filter: none !important;
+}
+
+
 /* Animation Enhancements */
 .project-hero,
 .tech-category,

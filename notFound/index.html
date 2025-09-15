@@ -19,15 +19,31 @@
 </head>
 
 <body>
+    <div class="manga-page-transition"></div>
     <header>
-        <div class="container portfolio-header">
-            <nav>
-                <a class="tab" href="../">Home</a>
-                <a class="tab" href="../">About</a>
-                <a class="tab" href="../Projects/">Projects</a>
-                <a class="tab" href="../Contact/">Contact</a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" id="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="portfolio-header">
+            <nav id="menu-items" class="menu-closed">
+                <h4 class="menu-title">Navigation</h4>
+                <a href="../" class="tab" data-aos="fade-down" data-aos-delay="200">Home</a>
+                <a href="./" class="tab" data-aos="fade-down" data-aos-delay="300">About</a>
+                <a href="../Projects/" class="tab" data-aos="fade-down" data-aos-delay="400">Projects</a>
+                <a href="path/to/your-cv.pdf" class="tab" data-aos="fade-down" data-aos-delay="500" download="Your-Name-CV.pdf">Get CV</a>
+                <button id="theme-toggle" class="tab" data-aos="fade-down" data-aos-delay="600"
+                    aria-label="Toggle theme">
+                    <img id="theme-icon" src="../assets/img/decor/moonIcon.png" alt="Theme Icon">
+                </button>
             </nav>
-            <h1>404 - Not Found</h1>
+            <div>
+                <h1 data-aos="zoom-in" data-aos-delay="800">404 Not Found</h1>
+                <hr class="name" data-aos="fade-up" data-aos-delay="900">
+            </div>
         </div>
     </header>
 
@@ -41,12 +57,12 @@
 
     <footer class="footer">
         <nav>
-            <a href="./" class="link">Home</a>
-            <a href="./About/" class="link">About</a>
-            <a href="./Projects/" class="link">Projects</a>
-            <a href="./Contact/" class="link">Contact</a>
+            <a href="../" class="link">Home</a>
+            <a href="../About/" class="link">About</a>
+            <a href="../Projects/" class="link">Projects</a>
+            <a href="../assets/img/ObiVerheyenCV.pdf" class="link" download="ObiVerheyenCV.pdf">Get CV</a>
         </nav>
-        <p>&copy; 2024 Obi Verheyen</p>
+        <p>&copy; 2025 Obi Verheyen</p>
     </footer>
 </body>
 

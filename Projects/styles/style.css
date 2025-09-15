@@ -1,3 +1,16 @@
+/* Section Styling */
+.projects-section,
+.academic-section {
+  margin: 4em 0;
+  padding: 0;
+}
+
+.projects-section .section-title,
+.academic-section .section-title {
+  margin-bottom: 2em;
+  margin-top: 0;
+}
+
 /* Introduction text styling */
 .intro-text {
   font-size: 1.3em;
@@ -11,8 +24,8 @@
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3em;
-  margin: 3em 0;
+  gap: 4em;
+  margin: 2em 0;
 }
 
 /* Project Cards */
@@ -31,6 +44,13 @@
   box-shadow: 0.5em 0.5em 0 var(--primary);
 }
 
+.project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
 .project-card.featured {
   border: 0.3em solid var(--primary);
   box-shadow: 0.4em 0.4em 0 var(--primary);
@@ -44,7 +64,7 @@
 .project-image {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -77,31 +97,16 @@
   opacity: 1;
 }
 
-.project-links {
-  display: flex;
-  gap: 1em;
-  flex-direction: column;
-  align-items: center;
-}
-
-.project-link,
-.gallery-link {
-  padding: 0.75em 1.5em;
-  background: var(--primary);
-  color: var(--card-bg);
-  text-decoration: none;
-  border-radius: var(--border-radius);
+.project-overlay-text {
   font-family: var(--font-accent);
-  font-size: 1.1em;
-  transition: all 0.3s ease;
+  font-size: 1.5em;
+  color: var(--card-bg);
+  text-align: center;
+  padding: 1em 2em;
+  background: var(--primary);
+  border-radius: var(--border-radius);
   border: 0.2em solid var(--primary);
-}
-
-.project-link:hover,
-.gallery-link:hover {
-  background: transparent;
-  color: var(--primary);
-  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 .project-badge {
@@ -119,22 +124,22 @@
 }
 
 .project-content {
-  padding: 2em;
+  padding: 1.5em;
 }
 
 .project-title {
   font-family: var(--font-title);
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 300;
-  margin-bottom: 1em;
+  margin-bottom: 0.8em;
   color: var(--primary);
   text-align: center;
 }
 
 .project-description {
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin-bottom: 1.5em;
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 1.2em;
   color: var(--primary);
   opacity: 0.9;
 }
@@ -143,7 +148,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
   justify-content: center;
 }
 
@@ -171,6 +176,13 @@
   overflow-x: auto;
   padding: 1em 0;
   justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.project-gallery a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .project-gallery img {
@@ -193,12 +205,12 @@
 .academic-projects {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2em;
+  gap: 3em;
   margin: 2em 0;
 }
 
 .academic-card {
-  background: var(--bg);
+  background: var(--card-bg);
   border: var(--border);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
@@ -212,7 +224,7 @@
 }
 
 .academic-content {
-  padding: 2em;
+  padding: 2.5em;
 }
 
 .academic-title {
@@ -263,21 +275,18 @@
 @media (min-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 3em;
+    gap: 4em;
   }
   
   .academic-projects {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2em;
+    gap: 3em;
   }
   
   .project-image {
-    height: 350px;
+    height: 250px;
   }
   
-  .project-links {
-    flex-direction: row;
-  }
   
   .hero-description {
     font-size: 1.4em;
@@ -287,15 +296,16 @@
 @media (min-width: 1024px) {
   .projects-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 4em;
+    gap: 5em;
   }
   
   .academic-projects {
     grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
   }
   
   .project-image {
-    height: 400px;
+    height: 280px;
   }
   
   .section-title {
@@ -368,8 +378,7 @@
 }
 
 /* Focus States for Accessibility */
-.project-link:focus,
-.gallery-link:focus,
+.project-card-link:focus,
 .academic-link:focus {
   outline: 0.2em solid var(--primary);
   outline-offset: 0.2em;
