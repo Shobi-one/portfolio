@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mario Kart Betting - Custom Game Development | Obi Verheyen</title>
+    <title>Mario Kart - C# Project</title>
     
     <!--CSS FILES-->
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="../../styles/mobile.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../styles/project_page_style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!--BaguetteBox CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
@@ -20,120 +21,233 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
     
     <!--SEO Meta Tags-->
-    <meta name="description" content="Mario Kart Betting: A unique .NET game blending racing simulation, custom game systems, and betting mechanics with a retro SNES-inspired top-down style.">
-    <meta name="keywords" content="game development, .NET, C#, custom game engine, sprite management, sound system, betting game, mario kart style">
+    <meta name="description" content="Goodnight: A 2D narrative exploration game developed in Unity. Showcasing C# programming, game design, and environmental storytelling skills.">
+    <meta name="keywords" content="unity development, c# programming, game development, 2d games, portfolio project">
+
+    <script>
+        (function () {
+            const storedTheme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', storedTheme);
+        })();
+    </script>
 </head>
 
 <body>
+    <div class="manga-page-transition"></div>
     <header>
-        <div class="container portfolio-header">
-            <nav>
-                <a class="tab" href="../../">Home</a>
-                <a class="tab" href="../../About/">About</a>
-                <a class="tab" href="../">Projects</a>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" id="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="portfolio-header">
+            <nav id="menu-items" class="menu-closed">
+                <h4 class="menu-title">Navigation</h4>
+                <a href="../../" class="tab" data-aos="fade-down" data-aos-delay="200">Home</a>
+                <a href="../../About/" class="tab" data-aos="fade-down" data-aos-delay="300">About</a>
+                <a href="../" class="tab" data-aos="fade-down" data-aos-delay="400">Projects</a>
                 <a href="../../assets/img/ObiVerheyenCV.pdf" class="tab" data-aos="fade-down" data-aos-delay="500" download="ObiVerheyenCV.pdf">Get CV</a>
+                <button id="theme-toggle" class="tab" data-aos="fade-down" data-aos-delay="600"
+                    aria-label="Toggle theme">
+                    <img id="theme-icon" src="/assets/img/decor/moonIcon.png" alt="Theme Icon">
+                </button>
             </nav>
-            <h1>Mario Kart Betting</h1>
-            <hr>
-            <div class="button-wrapper">
-                <a class="button" href="https://github.com/Shobi-one/MarioKartProject" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <div>
+                <h1 data-aos="zoom-in" data-aos-delay="800">Projects</h1>
+                <h2 class="name" data-aos="fade-up" data-aos-delay="900">MARIO KART</h2>
+                <h3 class="subtitle" data-aos="fade-up" data-aos-delay="1000">A .NET PROJECT</h3>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <section class="card">
-            <h2>Project Evolution</h2>
-            <p>
-                What began as a simple horse betting project transformed into a fully-realized racing game 
-                with a unique twist. Inspired by the classic SNES Mario Kart aesthetic, the game combines 
-                betting mechanics with a custom-built .NET game framework.
-            </p>
-        </section>
-
-        <section class="card">
-            <h2>Technical Innovations</h2>
-            <div class="tech-logos">
-                <img src="../../../assets/img/tech-logos/dotnet-logo.png" alt=".NET" title=".NET">
-                <img src="../../../assets/img/tech-logos/csharp-logo.png" alt="C#" title="C#">
-            </div>
-            <ul>
-                <li>Custom Sprite Sheet Management System</li>
-                <li>Advanced Sound Management Framework</li>
-                <li>Proprietary Betting Mechanics Engine</li>
-                <li>Top-down SNES-style Rendering Technique</li>
-            </ul>
-        </section>
-
-        <section class="card">
-            <h2>Custom Game Systems</h2>
-            <p>
-                To overcome .NET limitations and create a robust game experience, I implemented 
-                several custom systems from scratch:
-            </p>
-            <ul>
-                <li><strong>Sprite Sheet Manager:</strong> Efficiently handles sprite animations and rendering</li>
-                <li><strong>Sound Manager:</strong> Provides advanced audio control and playback</li>
-                <li><strong>Betting Mechanics:</strong> Developed a complex betting and race prediction system</li>
-                <li><strong>Rendering Engine:</strong> Created a custom top-down rendering approach mimicking SNES-era graphics</li>
-            </ul>
-        </section>
-
-        <section class="card">
-            <h2>Game Mechanics</h2>
-            <p>
-                Blend unique betting strategies with racing simulation. Players can:
-            </p>
-            <ul>
-                <li>Place bets on race outcomes</li>
-                <li>Analyze racer statistics</li>
-                <li>Experience nostalgic SNES-style top-down racing</li>
-                <li>Manage in-game economy and betting resources</li>
-            </ul>
-        </section>
-
-        <section class="card">
-            <h3>Development Challenges</h3>
-            <p>
-                Building a complete game system in .NET presented unique challenges:
-            </p>
-            <ul>
-                <li>Creating performant sprite and sound management</li>
-                <li>Implementing custom rendering techniques</li>
-                <li>Developing complex betting prediction algorithms</li>
-                <li>Maintaining SNES-era graphical aesthetic</li>
-            </ul>
-        </section>
-
-        <section class="card">
-            <h3>Project Screenshots</h3>
-            <div class="image-scroll baguetteBox">
-                <a href="../../assets/img/mario-kart-betting/screenshot1.png">
-                    <img src="../../assets/img/mario-kart-betting/screenshot1.png" alt="Game Betting Screen" width="300">
-                </a>
-                <a href="../../assets/img/mario-kart-betting/screenshot2.png">
-                    <img src="../../assets/img/mario-kart-betting/screenshot2.png" alt="Race Gameplay" width="300">
-                </a>
-                <a href="../../assets/img/mario-kart-betting/screenshot3.png">
-                    <img src="../../assets/img/mario-kart-betting/screenshot3.png" alt="Racer Selection" width="300">
-                </a>
+        <!-- Project Overview -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="section-title">Project Overview</h2>
+            <div class="project-hero">
+                <div class="project-image">
+                    <img src="../../assets/img/mariokart/game.png" alt="Goodnight Game Screenshot" class="main-screenshot">
+                    <div class="project-links">
+                        <a href="https://moziak.itch.io/goodnight" class="button primary-button" target="_blank" rel="noopener noreferrer">
+                            <span class="button-icon"></span>
+                            View Source Code
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <p class="project-description">
+                        <span class="emphasis">Goodnight</span> is a 2D narrative exploration game developed in Unity, 
+                        demonstrating skills in <span class="emphasis">C# programming</span>, <span class="emphasis">game design</span>, 
+                        and <span class="emphasis">environmental storytelling</span>. The project showcases my ability to create 
+                        immersive experiences through atmospheric design and intuitive gameplay mechanics.
+                    </p>
+                    <div class="tech-logos">
+                        <img src="../../assets/img/tech/csharp.png" alt="C#" title="C# Programming">
+                    </div>
+                </div>
             </div>
         </section>
+
+        <!-- Technical Implementation -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="section-title">Technical Implementation</h2>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h4>Core Development</h4>
+                    <ul class="skill-list">
+                        <li>Unity 2D Game Engine</li>
+                        <li>C# Scripting & Game Logic</li>
+                        <li>2D Physics & Collision Detection</li>
+                        <li>Scene Management & Transitions</li>
+                        <li>Player Movement & Controls</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h4>Game Design</h4>
+                    <ul class="skill-list">
+                        <li>Environmental Storytelling</li>
+                        <li>Atmospheric Lighting Effects</li>
+                        <li>UI/UX Design</li>
+                        <li>Puzzle Mechanics</li>
+                        <li>Audio Integration</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h4>Development Process</h4>
+                    <ul class="skill-list">
+                        <li>Iterative Design Process</li>
+                        <li>Performance Optimization</li>
+                        <li>Cross-Platform Testing</li>
+                        <li>Version Control (Git)</li>
+                        <li>Asset Management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Timeline -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="600">
+            <h2 class="section-title">Development Process</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Planning & Design</div>
+                        <div class="timeline-title">Concept Development</div>
+                        <p>Analyzed inspiration from games like Yume Nikki and Undertale to create a unique narrative exploration experience. 
+                        Designed core gameplay mechanics and atmospheric elements.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Implementation</div>
+                        <div class="timeline-title">Unity Development</div>
+                        <p>Built the game using Unity and C#, implementing smooth 2D movement, atmospheric effects, 
+                        and intuitive puzzle mechanics. Focused on creating an immersive player experience.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Polish & Release</div>
+                        <div class="timeline-title">Final Optimization</div>
+                        <p>Refined gameplay mechanics, optimized performance, and prepared the game for release on Itch.io. 
+                        Implemented final audio design and visual polish.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features & Skills -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="800">
+            <h2 class="section-title">Key Features & Skills Demonstrated</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>Game Programming</h4>
+                    <p>Implemented complex game logic using C# including player movement, collision detection, and interactive elements.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Environmental Design</h4>
+                    <p>Created atmospheric environments that tell a story through visual design and player exploration.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>User Experience</h4>
+                    <p>Designed intuitive controls and gameplay mechanics that encourage exploration and emotional engagement.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Project Management</h4>
+                    <p>Successfully planned, developed, and released a complete game project from concept to publication.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Gallery -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="1000">
+            <h2 class="section-title">Project Screenshots</h2>
+            <div class="gallery-container baguetteBox">
+                <div class="gallery-grid">
+                    <a href="../../assets/img/mariokart/char.png" class="gallery-item">
+                        <img src="../../assets/img/mariokart/char.png" alt="Goodnight Game Environment">
+                        <div class="gallery-overlay">
+                            <span class="gallery-text">Character Select Screen</span>
+                        </div>
+                    </a>
+                    <a href="../../assets/img/mariokart/menu.png" class="gallery-item">
+                        <img src="../../assets/img/mariokart/menu.png" alt="Goodnight Atmospheric Scene">
+                        <div class="gallery-overlay">
+                            <span class="gallery-text">Map Select Screen</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Links -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="1200">
+            <h2 class="section-title">Project Links</h2>
+            <div class="project-links-section">
+                <a href="https://moziak.itch.io/goodnight" class="button primary-button" target="_blank" rel="noopener noreferrer">
+                    Play on Itch.io
+                </a>
+                <a href="../" class="button secondary-button">
+                    <span class="button-icon">←</span>
+                    Back to Projects
+                </a>
+            </div>
+        </section>
+
+        <div class="divider" data-aos="fade-in" data-aos-delay="1400">◆ ◇ ◆</div>
     </main>
 
     <footer class="footer">
         <nav>
-            <a href="./" class="link">Home</a>
-            <a href="./About/" class="link">About</a>
-            <a href="./Projects/" class="link">Projects</a>
-            <a href="./Contact/" class="link">Contact</a>
+            <a href="../../" class="link">Home</a>
+            <a href="../../About/" class="link">About</a>
+            <a href="../" class="link">Projects</a>
+            <a href="../../assets/img/ObiVerheyenCV.pdf" class="link" download="ObiVerheyenCV.pdf">Get CV</a>
         </nav>
-        <p>&copy; 2024 Obi Verheyen | Game Developer</p>
+        <p>&copy; 2025 Obi Verheyen</p>
     </footer>
 
-    <!--BaguetteBox JS-->
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../scripts/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize BaguetteBox
         baguetteBox.run('.baguetteBox');
     </script>
 </body>
