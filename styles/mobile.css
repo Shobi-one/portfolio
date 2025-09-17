@@ -400,7 +400,7 @@ nav a:active,
   font-size: 2.2em;
   font-weight: 200;
   margin-bottom: 2em;
-  margin-top: 1em;
+  margin-top: 2em;
   color: var(--primary);
   text-align: center;
 }
@@ -591,21 +591,24 @@ nav a:active,
 }
 
 
-/* Tech Logos */
-.tech-logos {
+/* Tech Tag */
+.project-tech {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
   flex-wrap: wrap;
+  gap: 0.5em;
+  margin-bottom: 1.2em;
+  justify-content: center;
 }
 
-.tech-logos img {
-  max-width: 40px;
-  max-height: 40px;
-  width: auto;
-  height: auto;
-  transition: transform 0.2s ease;
+.tech-tag {
+  background: var(--primary);
+  color: var(--card-bg);
+  padding: 0.4em 0.8em;
+  border-radius: 1.5em;
+  font-size: 0.9em;
+  font-family: var(--font-accent);
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 /* Forms */
@@ -782,7 +785,7 @@ body.menu-open .hamburger-menu {
   font-size: 1.3em;
   border-radius: 0.5em;
   text-align: center;
-  transition: all 0.2s ease; /* Back to original speed to match footer */
+  transition: all 0.2s ease;
   transform: translate(0, 0);
 }
 

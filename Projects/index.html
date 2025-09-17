@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Projects Page</title>
-    
+
     <!--CSS FILES-->
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="../styles/mobile.css">
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <!--BaguetteBox CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
 
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap"
+        rel="stylesheet">
 
     <script>
         (function () {
@@ -27,6 +30,7 @@
         })();
     </script>
 </head>
+
 <body>
     <div class="manga-page-transition"></div>
     <header>
@@ -43,7 +47,8 @@
                 <a href="../" class="tab" data-aos="fade-down" data-aos-delay="200">Home</a>
                 <a href="../About/" class="tab" data-aos="fade-down" data-aos-delay="300">About</a>
                 <a href="./" class="tab" data-aos="fade-down" data-aos-delay="400">Projects</a>
-                <a href="../assets/img/ObiVerheyenCV.pdf" class="tab" data-aos="fade-down" data-aos-delay="500" download="ObiVerheyenCV.pdf">Get CV</a>
+                <a href="../assets/img/ObiVerheyenCV.pdf" class="tab" data-aos="fade-down" data-aos-delay="500"
+                    download="ObiVerheyenCV.pdf">Get CV</a>
                 <button id="theme-toggle" class="tab" data-aos="fade-down" data-aos-delay="600"
                     aria-label="Toggle theme">
                     <img id="theme-icon" src="../assets/img/decor/moonIcon.png" alt="Theme Icon">
@@ -56,23 +61,26 @@
         </div>
     </header>
 
-    <main class="container">
+    <main>
         <!-- Personal Projects Section -->
         <section class="projects-section" data-aos="fade-up" data-aos-delay="400">
-            <h2 class="section-title">Personal Projects</h2>
+            <h2 class="section-title">Main Projects</h2>
             <div class="projects-grid">
                 <!-- Goodnight Project -->
                 <article class="project-card featured" data-aos="fade-up" data-aos-delay="500">
                     <a href="./Goodnight/" class="project-card-link">
                         <div class="project-header">
                             <div class="project-image">
-                                <img src="../assets/img/goodnight/goodnight1.png" alt="Goodnight Game Screenshot" class="main-image">
+                                <img src="../assets/img/goodnight/goodnight1.png" alt="Goodnight Game Screenshot"
+                                    class="main-image">
                             </div>
                             <div class="project-badge">Featured</div>
                         </div>
                         <div class="project-content">
                             <h3 class="project-title">Goodnight</h3>
-                            <p class="project-description">A Unity 2D game where players navigate a dreamscape to uncover a mysterious story. Features atmospheric visuals and engaging gameplay mechanics.</p>
+                            <p class="project-description">A Unity 2D game where players navigate a dreamscape to
+                                uncover a mysterious story. Features atmospheric visuals and engaging gameplay
+                                mechanics.</p>
                             <div class="project-tech">
                                 <span class="tech-tag">Unity</span>
                                 <span class="tech-tag">C#</span>
@@ -80,64 +88,89 @@
                             </div>
                         </div>
                         <div class="project-gallery baguetteBox">
-                            <a href="../assets/img/goodnight/goodnight1.png" data-caption="Goodnight Gameplay Screenshot 1">
+                            <a href="../assets/img/goodnight/goodnight1.png"
+                                data-caption="Goodnight Gameplay Screenshot 1">
                                 <img src="../assets/img/goodnight/goodnight1.png" alt="Goodnight Screenshot 1">
                             </a>
-                            <a href="../assets/img/goodnight/goodnight2.png" data-caption="Goodnight Gameplay Screenshot 2">
+                            <a href="../assets/img/goodnight/goodnight2.png"
+                                data-caption="Goodnight Gameplay Screenshot 2">
                                 <img src="../assets/img/goodnight/goodnight2.png" alt="Goodnight Screenshot 2">
                             </a>
-                        </a>
-                        </div>
-                </article>
+                    </a>
+            </div>
+            </article>
 
-                <!-- GoldCore Project -->
-                <article class="project-card" data-aos="fade-up" data-aos-delay="600">
-                    <a href="../notFound/" class="project-card-link">
-                        <div class="project-header">
-                            <div class="project-image">
-                                <img src="../assets/img/goldcore/goldcore1.png" alt="GoldCore Framework Screenshot" class="main-image">
-                            </div>
+            <!-- GoldCore Project -->
+            <article class="project-card featured" data-aos="fade-up" data-aos-delay="600">
+                <a href="../notFound/" class="project-card-link">
+                    <div class="project-header">
+                        <div class="project-image">
+                            <img src="../assets/img/goldcore/goldcore1.png" alt="GoldCore Framework Screenshot"
+                                class="main-image">
                         </div>
-                        <div class="project-content">
-                            <h3 class="project-title">GoldCore Framework</h3>
-                            <p class="project-description">A Unity framework designed to streamline game development. GoldCore provides essential mechanics to make game development and rapid prototyping easier.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Unity</span>
-                                <span class="tech-tag">C#</span>
-                                <span class="tech-tag">Framework</span>
-                            </div>
+                        <div class="project-badge">Featured</div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">GoldCore Framework</h3>
+                        <p class="project-description">A Unity framework designed to streamline game development.
+                            GoldCore provides essential mechanics to make game development and rapid prototyping easier.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">Framework</span>
                         </div>
-                        <div class="project-gallery baguetteBox">
-                            <a href="../assets/img/goldcore/goldcore1.png" data-caption="GoldCore Framework Overview">
-                                <img src="../assets/img/goldcore/goldcore1.png" alt="GoldCore Screenshot 1">
-                            </a>
-                            <a href="../assets/img/goldcore/goldcore2.png" data-caption="GoldCore Framework Features">
-                                <img src="../assets/img/goldcore/goldcore2.png" alt="GoldCore Screenshot 2">
-                            </a>
+                    </div>
+                    <div class="project-gallery baguetteBox">
+                        <a href="../assets/img/goldcore/goldcore1.png" data-caption="GoldCore Framework Overview">
+                            <img src="../assets/img/goldcore/goldcore1.png" alt="GoldCore Screenshot 1">
                         </a>
-                        </div>
-                </article>
+                        <a href="../assets/img/goldcore/goldcore2.png" data-caption="GoldCore Framework Features">
+                            <img src="../assets/img/goldcore/goldcore2.png" alt="GoldCore Screenshot 2">
+                        </a>
+                </a>
+                </div>
+            </article>
             </div>
         </section>
+
+        <!-- Mini Projects Section -->
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="1000">Side Projects</h2>
+        <section class="card-container-mini" data-aos="fade-up" data-aos-delay="1000">
+            <a href="../notFound/" class="card-mini card-link">
+                <h4>Scratch Marks</h4>
+                <p>A Garry's Mod addon aiming to recreate the Dead By Daylight's style of scratch marks.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">LUA</span>
+                    <span class="tech-tag">Mod</span>
+                </div>
+            </a>
+        </section>
+
 
         <!-- Academic Projects Section -->
-        <section class="academic-section" data-aos="fade-up" data-aos-delay="800">
-            <h2 class="section-title">Academic Projects</h2>
-            <div class="academic-projects">
-                <article class="academic-card" data-aos="fade-up" data-aos-delay="900">
-                    <div class="academic-content">
-                        <h3 class="academic-title">Mario Kart Betting</h3>
-                        <p class="academic-description">Originally meant to be a small horse betting project, but evolved into a betting game with a Mario
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="1000">Academic Projects</h2>
+        <section class="card-container-mini" data-aos="fade-up" data-aos-delay="1000">
+            <a href="./MarioKart/" class="card-mini card-link">
+                <h4>Mario Kart Betting</h4>
+                <p>Originally meant to be a small horse betting project, but evolved into a betting game with a Mario
                     Kart theme.</p>
-                        <div class="academic-tech">
-                            <span class="tech-tag">C#</span>
-                            <span class="tech-tag">.NET</span>
-                        </div>
-                        <a href="./MarioKart/" class="academic-link">View Project</a>
-                    </div>
-                </article>
-            </div>
+                <div class="project-tech">
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">.NET</span>
+                </div>
+            </a>
+            <a href="../notFound/" class="card-mini card-link">
+                <h4>Point and Click Game</h4>
+                <p>A group project for front-end class where we made a small web game together.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+            </a>
         </section>
+
 
         <div class="divider" data-aos="fade-in">◆ ◇ ◆</div>
     </main>
@@ -171,4 +204,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -40,8 +40,9 @@
 }
 
 .project-card:hover {
-  transform: translateY(-0.5em);
-  box-shadow: 0.5em 0.5em 0 var(--primary);
+  background: #eaeaea;
+  transform: translate(0.1em, 0.1em);
+  box-shadow: 0.15em 0.15em 0 var(--primary);
 }
 
 .project-card-link {
@@ -93,10 +94,6 @@
   transition: opacity 0.3s ease;
 }
 
-.project-card:hover .project-overlay {
-  opacity: 1;
-}
-
 .project-overlay-text {
   font-family: var(--font-accent);
   font-size: 1.5em;
@@ -128,7 +125,7 @@
 }
 
 .project-title {
-  font-family: var(--font-title);
+  font-family: var(--font-accent);
   font-size: 1.8em;
   font-weight: 300;
   margin-bottom: 0.8em;
@@ -142,32 +139,6 @@
   margin-bottom: 1.2em;
   color: var(--primary);
   opacity: 0.9;
-}
-
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  margin-bottom: 1.2em;
-  justify-content: center;
-}
-
-.tech-tag {
-  background: var(--primary);
-  color: var(--card-bg);
-  padding: 0.4em 0.8em;
-  border-radius: 1.5em;
-  font-size: 0.9em;
-  font-family: var(--font-accent);
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.tech-tag:hover {
-  background: var(--card-bg);
-  color: var(--primary);
-  border: 0.1em solid var(--primary);
-  transform: scale(1.05);
 }
 
 .project-gallery {
@@ -241,13 +212,6 @@
   margin-bottom: 1.5em;
   color: var(--primary);
   opacity: 0.9;
-}
-
-.academic-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  margin-bottom: 1.5em;
 }
 
 .academic-link {
