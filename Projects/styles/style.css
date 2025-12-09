@@ -40,7 +40,7 @@
 }
 
 .project-card:hover {
-  background: #eaeaea;
+  background: var(--hover-bg);
   transform: translate(0.1em, 0.1em);
   box-shadow: 0.15em 0.15em 0 var(--primary);
 }
@@ -65,7 +65,7 @@
 .project-image {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 160px;
   overflow: hidden;
 }
 
@@ -121,24 +121,24 @@
 }
 
 .project-content {
-  padding: 1.5em;
+  padding: 1em;
 }
 
 .project-title {
   font-family: var(--font-accent);
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: 300;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.6em;
   color: var(--primary);
   text-align: center;
 }
 
 .project-description {
-  font-size: 1.1em;
-  line-height: 1.5;
-  margin-bottom: 1.2em;
+  font-size: 1em;
+  line-height: 1.4;
+  margin-bottom: 0.8em;
   color: var(--primary);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .project-gallery {
@@ -248,7 +248,7 @@
   }
   
   .project-image {
-    height: 250px;
+    height: 200px;
   }
   
   
@@ -259,8 +259,8 @@
 
 @media (min-width: 1024px) {
   .projects-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 5em;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
   }
   
   .academic-projects {
@@ -269,7 +269,7 @@
   }
   
   .project-image {
-    height: 280px;
+    height: 240px;
   }
   
   .section-title {
@@ -279,8 +279,9 @@
 
 @media (min-width: 1200px) {
   .projects-grid {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 3em auto;
+    padding: 0 1em;
   }
   
   .academic-projects {

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - ClipEngine</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
+    <link rel="stylesheet" href="../../styles/mobile.css">
+    <link rel="stylesheet" href="../styles/project_page_style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
+    
+    <meta name="description" content="ClipEngine: A browser-based game engine for creating 2D and 3D interactive experiences with p5.js and Three.js integration.">
+    <meta name="keywords" content="game engine, javascript, p5.js, three.js, web development, game development, portfolio project">
+
+    <script>
+        (function () {
+            const storedTheme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', storedTheme);
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="manga-page-transition"></div>
+    <header>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" id="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="portfolio-header">
+            <nav id="menu-items" class="menu-closed">
+                <h4 class="menu-title">Navigation</h4>
+                <a href="../../" class="tab" data-aos="fade-down" data-aos-delay="200">Home</a>
+                <a href="../../About/" class="tab" data-aos="fade-down" data-aos-delay="300">About</a>
+                <a href="../" class="tab" data-aos="fade-down" data-aos-delay="400">Projects</a>
+                <a href="../../assets/img/ObiVerheyenCV.pdf" class="tab" data-aos="fade-down" data-aos-delay="500" download="ObiVerheyenCV.pdf">Get CV</a>
+                <button id="theme-toggle" class="tab" data-aos="fade-down" data-aos-delay="600"
+                    aria-label="Toggle theme">
+                    <img id="theme-icon" src="/assets/img/decor/moonIcon.png" alt="Theme Icon">
+                </button>
+            </nav>
+            <div>
+                <h1 data-aos="zoom-in" data-aos-delay="800">Projects</h1>
+                <h2 class="name" data-aos="fade-up" data-aos-delay="900">CLIPENGINE</h2>
+                <h3 class="subtitle" data-aos="fade-up" data-aos-delay="1000">A Browser-Based Game Engine</h3>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Project Overview -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="section-title">Project Overview</h2>
+            <div class="project-hero">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/800x450/1a1a1a/00ff88?text=ClipEngine+Interface" alt="ClipEngine Screenshot" class="main-screenshot">
+                    <div class="project-links">
+                        <a href="https://github.com/Shobi-one/js-game-engine" class="button primary-button" target="_blank" rel="noopener noreferrer">
+                            <span class="button-icon"></span>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <p class="project-description">
+                        <span class="emphasis">ClipEngine</span> is a browser-based game engine and visual editor for creating 
+                        <span class="emphasis">2D and 3D interactive experiences</span>. Built with modern web technologies, 
+                        it provides an <span class="emphasis">intuitive IDE-like interface</span> with integrated 
+                        <span class="emphasis">audio support</span>, <span class="emphasis">live preview</span>, and 
+                        <span class="emphasis">real-time code editing</span>. The engine combines the power of 
+                        <span class="emphasis">p5.js</span> for 2D graphics, <span class="emphasis">Three.js</span> for 
+                        3D rendering, and <span class="emphasis">Tone.js</span> for comprehensive audio capabilities.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">p5.js</span>
+                        <span class="tech-tag">Three.js</span>
+                        <span class="tech-tag">Tone.js</span>
+                        <span class="tech-tag">Vite</span>
+                        <span class="tech-tag">Web Workers</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Implementation -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="section-title">Technical Implementation</h2>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h4>Core Development</h4>
+                    <ul class="skill-list">
+                        <li>p5.js Integration for 2D Graphics</li>
+                        <li>Three.js 3D Scene Management</li>
+                        <li>Tone.js Audio Engine</li>
+                        <li>Web Workers for Performance</li>
+                        <li>Scene Loading & Saving System</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h4>Engine Features</h4>
+                    <ul class="skill-list">
+                        <li>Visual Code Editor</li>
+                        <li>Real-time Preview Viewport</li>
+                        <li>Project Explorer Panel</li>
+                        <li>Properties Panel for Objects</li>
+                        <li>GLTF/GLB Model Loading</li>
+                        <li>Audio Synthesis & Effects</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h4>Development Process</h4>
+                    <ul class="skill-list">
+                        <li>Modern Build System (Vite)</li>
+                        <li>Progressive Web App (PWA)</li>
+                        <li>Component-Based Architecture</li>
+                        <li>Version Control with Git</li>
+                        <li>Modular Scene Format (JSON)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="600">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>🎨 2D Game Development</h4>
+                    <p>Create 2D games and animations using p5.js with an intuitive sprite-based system. Features include real-time animation, collision detection, and dynamic behaviors.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🎮 3D Scene Editor</h4>
+                    <p>Build 3D environments with Three.js including primitives, custom models, and advanced lighting. Import GLTF/GLB models and edit properties in real-time.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🎵 Integrated Audio Engine</h4>
+                    <p>Comprehensive audio system powered by Tone.js with sound generation, synthesis, effects processing (reverb, delay, distortion), and mixing capabilities.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>💻 Visual Code Editor</h4>
+                    <p>Built-in code editor for writing object behaviors with syntax highlighting. Edit sprite logic, 3D animations, and custom interactions on the fly.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>📦 Scene Management</h4>
+                    <p>Save and load complete scenes using JSON-based configuration. Includes sample scenes for both 2D and 3D to get started quickly.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>⚡ Live Preview</h4>
+                    <p>See your changes in real-time with the built-in viewport. Switch between 2D and 3D modes seamlessly with immediate feedback.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>🔧 Web Workers</h4>
+                    <p>Multi-threaded processing support for performance-intensive calculations without blocking the main thread or game logic.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>📱 PWA Support</h4>
+                    <p>Installable as a Progressive Web App with offline capability. Works across all modern browsers with WebGL support.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Timeline -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="800">
+            <h2 class="section-title">Development Process</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Foundation</div>
+                        <div class="timeline-title">Core Architecture & 2D Engine</div>
+                        <p>Established the project structure with Vite build system. Integrated p5.js for 2D graphics, 
+                        implemented sprite system, and created the basic UI with project explorer and properties panels.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">3D Integration</div>
+                        <div class="timeline-title">Three.js & Advanced Features</div>
+                        <p>Added Three.js for 3D rendering capabilities. Implemented 3D scene editor with object manipulation, 
+                        lighting systems, and model loading (GLTF/GLB, OBJ). Created seamless 2D/3D mode switching.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Audio & Polish</div>
+                        <div class="timeline-title">Audio Engine & PWA</div>
+                        <p>Integrated Tone.js for comprehensive audio capabilities including synthesis, effects, and mixing. 
+                        Added web worker support for performance. Implemented PWA features for offline use and installability.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Demonstrated -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="1000">
+            <h2 class="section-title">Skills Demonstrated</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>Modern JavaScript</h4>
+                    <p>ES6+ features, modules, async/await, and web APIs. Proficient use of modern JavaScript patterns and best practices.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Framework Integration</h4>
+                    <p>Successfully integrated multiple complex libraries (p5.js, Three.js, Tone.js) into a cohesive system with unified API.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Architecture Design</h4>
+                    <p>Component-based architecture with clear separation of concerns. Modular design allowing easy extension and maintenance.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Performance Optimization</h4>
+                    <p>Web Workers for multi-threading, efficient rendering loops, and optimized scene management for smooth 60 FPS performance.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>UI/UX Development</h4>
+                    <p>Created an intuitive IDE-like interface with custom web components, modal dialogs, and responsive panels.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Build Tools</h4>
+                    <p>Modern development workflow using Vite for fast development and optimized production builds with code splitting.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Examples -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="1200">
+            <h2 class="section-title">Code Examples</h2>
+            <div class="code-section">
+                <h4>2D Sprite Animation (p5.js)</h4>
+                <pre><code>// Bouncing ball with physics
+if (!this.velocity) this.velocity = 3;
+if (!this.direction) this.direction = 1;
+this.y += this.velocity * this.direction;
+if (this.y > height - 25 || this.y < 25) {
+    this.direction *= -1;
+}</code></pre>
+            </div>
+            
+            <div class="code-section">
+                <h4>3D Object Animation (Three.js)</h4>
+                <pre><code>// Rotating and pulsing cube
+this.mesh.rotation.y += 0.02;
+const scale = 1 + Math.sin(Date.now() * 0.002) * 0.3;
+this.mesh.scale.set(scale, scale, scale);</code></pre>
+            </div>
+            
+            <div class="code-section">
+                <h4>Audio Synthesis (Tone.js)</h4>
+                <pre><code>// Generate synthesizer with reverb
+audioEngine.generateSynth('melody', { 
+    type: 'triangle',
+    channel: 'music' 
+});
+audioEngine.createEffect('space', 'reverb', { 
+    decay: 2.0, 
+    wet: 0.5 
+});
+audioEngine.applyEffect('melody', 'space');</code></pre>
+            </div>
+        </section>
+
+        <!-- Project Links -->
+        <section class="panel" data-aos="fade-up" data-aos-delay="1400">
+            <h2 class="section-title">Project Links</h2>
+            <div class="project-links-section">
+                <a href="https://github.com/Shobi-one/js-game-engine" class="button primary-button" target="_blank" rel="noopener noreferrer">
+                    View on GitHub
+                </a>
+                <a href="../" class="button secondary-button">
+                    <span class="button-icon">←</span>
+                    Back to Projects
+                </a>
+            </div>
+        </section>
+
+        <div class="divider" data-aos="fade-in" data-aos-delay="1600">◆ ◇ ◆</div>
+    </main>
+
+    <footer class="footer">
+        <nav>
+            <a href="../../" class="link">Home</a>
+            <a href="../../About/" class="link">About</a>
+            <a href="../" class="link">Projects</a>
+            <a href="../../assets/img/ObiVerheyenCV.pdf" class="link" download="ObiVerheyenCV.pdf">Get CV</a>
+        </nav>
+        <p>&copy; 2025 Obi Verheyen</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Initialize BaguetteBox
+        baguetteBox.run('.baguetteBox');
+    </script>
+</body>
+
+</html>
