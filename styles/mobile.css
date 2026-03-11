@@ -238,6 +238,15 @@ nav a:hover,
   box-shadow: 0.15em 0.15em 0 var(--primary);
 }
 
+[data-theme="dark"] .button:hover,
+[data-theme="dark"] nav a:hover,
+[data-theme="dark"] .card-mini:hover,
+[data-theme="dark"] .link:hover,
+[data-theme="dark"] .tab:hover {
+  background: var(--bg);
+  color: var(--primary);
+}
+
 .button:active,
 nav a:active,
 .card-mini:active,
@@ -771,6 +780,10 @@ body.menu-open .hamburger-menu {
 
 [data-theme="dark"] img {
   filter: invert(1) hue-rotate(180deg);
+}
+
+[data-theme="dark"] #baguetteBox-overlay img {
+  filter: none;
 }
 
 [data-theme="dark"] .card-mini:hover img, .link:hover img {

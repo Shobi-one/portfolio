@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - AcademDRM-CPP</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
+    <link rel="stylesheet" href="../../styles/mobile.css">
+    <link rel="stylesheet" href="../styles/project_page_style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
+
+    <meta name="description" content="AcademDRM-CPP: A proof-of-concept DRM client and server project using C++ and Python to explore licensing and integrity validation flows.">
+    <meta name="keywords" content="C++, Python, DRM, client server, licensing, proof of concept, portfolio project">
+
+    <script>
+        (function () {
+            const storedTheme = localStorage.getItem('theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', storedTheme);
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="manga-page-transition"></div>
+    <header>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" id="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="portfolio-header">
+            <nav id="menu-items" class="menu-closed">
+                <h4 class="menu-title">Navigation</h4>
+                <a href="../../" class="tab" data-aos="fade-down" data-aos-delay="200">Home</a>
+                <a href="../../About/" class="tab" data-aos="fade-down" data-aos-delay="300">About</a>
+                <a href="../" class="tab" data-aos="fade-down" data-aos-delay="400">Projects</a>
+                <a href="../../assets/img/ObiVerheyenCV.pdf" class="tab" data-aos="fade-down" data-aos-delay="500" download="ObiVerheyenCV.pdf">Get CV</a>
+                <button id="theme-toggle" class="tab" data-aos="fade-down" data-aos-delay="600" aria-label="Toggle theme">
+                    <img id="theme-icon" src="/assets/img/decor/moonIcon.png" alt="Theme Icon">
+                </button>
+            </nav>
+            <div>
+                <h1 data-aos="zoom-in" data-aos-delay="800">Projects</h1>
+                <h2 class="name" data-aos="fade-up" data-aos-delay="900">ACADEMDRM-CPP</h2>
+                <h3 class="subtitle" data-aos="fade-up" data-aos-delay="1000">C++/Python Security Prototype</h3>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="panel" data-aos="fade-up" data-aos-delay="200">
+            <h2 class="section-title">Project Overview</h2>
+            <div class="project-hero">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/1100x620/181826/f5f5f5?text=AcademDRM-CPP" alt="AcademDRM-CPP Overview" class="main-screenshot">
+                </div>
+                <div class="project-info">
+                    <p class="project-description">
+                        <span class="emphasis">AcademDRM-CPP</span> is a proof-of-concept project inspired by modern anti-tamper ecosystems.
+                        It explores a <span class="emphasis">client/server DRM architecture</span> where a native C++ client communicates with
+                        a Python backend for <span class="emphasis">license validation</span>, session handling, and runtime checks.
+                        The focus is on learning secure software distribution principles and protocol design in an academic context.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Client/Server</span>
+                        <span class="tech-tag">Security Concepts</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel" data-aos="fade-up" data-aos-delay="400">
+            <h2 class="section-title">Technical Scope</h2>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h4>C++ Client</h4>
+                    <ul class="skill-list">
+                        <li>License request and response handling</li>
+                        <li>Session token processing</li>
+                        <li>Local integrity and startup checks</li>
+                        <li>Error code and fallback flow management</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h4>Python Server</h4>
+                    <ul class="skill-list">
+                        <li>License validation endpoint logic</li>
+                        <li>Request parsing and structured responses</li>
+                        <li>Token/session lifecycle design</li>
+                        <li>Logging and audit-friendly output</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h4>Engineering Focus</h4>
+                    <ul class="skill-list">
+                        <li>Protocol design between native and backend systems</li>
+                        <li>Threat-model inspired design decisions</li>
+                        <li>Defensive programming and validation paths</li>
+                        <li>Separation of concerns between client and service</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel" data-aos="fade-up" data-aos-delay="600">
+            <h2 class="section-title">What This Demonstrates</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>Multi-Language Architecture</h4>
+                    <p>Designed and connected a native C++ application with a Python server to model real-world software protection flows.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Systems-Level Thinking</h4>
+                    <p>Worked with stateful validation, session lifecycle concerns, and defensive checks typical for distributed systems.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Security Awareness</h4>
+                    <p>Applied practical security concepts like strict input validation, bounded trust, and clear failure behavior.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>Protocol Design</h4>
+                    <p>Defined predictable request/response contracts that make client and server behaviors easier to test and evolve.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel" data-aos="fade-up" data-aos-delay="800">
+            <h2 class="section-title">Project Notes</h2>
+            <div class="project-links-section">
+                <a href="../" class="button secondary-button">
+                    <span class="button-icon">←</span>
+                    Back to Projects
+                </a>
+            </div>
+        </section>
+
+        <div class="divider" data-aos="fade-in" data-aos-delay="1000">◆ ◇ ◆</div>
+    </main>
+
+    <footer class="footer">
+        <nav>
+            <a href="../../" class="link">Home</a>
+            <a href="../../About/" class="link">About</a>
+            <a href="../" class="link">Projects</a>
+            <a href="../../assets/img/ObiVerheyenCV.pdf" class="link" download="ObiVerheyenCV.pdf">Get CV</a>
+        </nav>
+        <p>&copy; 2025 Obi Verheyen</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../scripts/main.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+
+</html>
