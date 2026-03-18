@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - AcademDRM-CPP</title>
+    <title>Portfolio - AcademDRM-Cpp</title>
 
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="../../styles/mobile.css">
@@ -15,8 +15,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap" rel="stylesheet">
 
-    <meta name="description" content="AcademDRM-CPP: A proof-of-concept DRM client and server project using C++ and Python to explore licensing and integrity validation flows.">
-    <meta name="keywords" content="C++, Python, DRM, client server, licensing, proof of concept, portfolio project">
+    <meta name="description" content="AcademDRM-Cpp: an educational DRM/anti-tamper prototype featuring a C++ client and a Python Flask license server with signed responses, HWID binding, integrity checks, and a small VM for protected logic.">
+    <meta name="keywords" content="C++, Python, Flask, DRM, anti-tamper, anti-debug, integrity checks, VM, bytecode, OpenSSL, curl, vcpkg, CMake, licensing, HWID">
 
     <script>
         (function () {
@@ -51,7 +51,7 @@
             <div>
                 <h1 data-aos="zoom-in" data-aos-delay="800">Projects</h1>
                 <h2 class="name" data-aos="fade-up" data-aos-delay="900">ACADEMDRM-CPP</h2>
-                <h3 class="subtitle" data-aos="fade-up" data-aos-delay="1000">C++/Python Security Prototype</h3>
+                <h3 class="subtitle" data-aos="fade-up" data-aos-delay="1000">Educational DRM (C++ and Python)</h3>
             </div>
         </div>
     </header>
@@ -61,53 +61,77 @@
             <h2 class="section-title">Project Overview</h2>
             <div class="project-hero">
                 <div class="project-image">
-                    <img src="https://via.placeholder.com/1100x620/181826/f5f5f5?text=AcademDRM-CPP" alt="AcademDRM-CPP Overview" class="main-screenshot">
+                    <img src="https://via.placeholder.com/1100x620/181826/f5f5f5?text=AcademDRM-Cpp" alt="AcademDRM-Cpp Overview" class="main-screenshot">
                 </div>
                 <div class="project-info">
                     <p class="project-description">
-                        <span class="emphasis">AcademDRM-CPP</span> is a proof-of-concept project inspired by modern anti-tamper ecosystems.
-                        It explores a <span class="emphasis">client/server DRM architecture</span> where a native C++ client communicates with
-                        a Python backend for <span class="emphasis">license validation</span>, session handling, and runtime checks.
-                        The focus is on learning secure software distribution principles and protocol design in an academic context.
+                        <span class="emphasis">AcademDRM-Cpp</span> is an <span class="emphasis">educational DRM and anti-tamper prototype</span>
+                        built to explore how modern software protection systems stitch together licensing, integrity validation, and protected feature gating.
+                        It consists of a <span class="emphasis">native C++ client</span> and a <span class="emphasis">Python Flask license server</span>
+                        that returns <span class="emphasis">signed</span> license payloads and enforces <span class="emphasis">hardware-bound activation</span>.
                     </p>
+
                     <div class="project-tech">
                         <span class="tech-tag">C++</span>
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Client/Server</span>
-                        <span class="tech-tag">Security Concepts</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">OpenSSL</span>
+                        <span class="tech-tag">libcurl</span>
+                        <span class="tech-tag">CMake</span>
+                        <span class="tech-tag">vcpkg</span>
+                    </div>
+
+                    <div class="project-links-section" style="margin-top: 1rem;">
+                        <a class="button secondary-button" href="https://github.com/Shobi-one/AcademDRM-Cpp" target="_blank" rel="noopener noreferrer">
+                            View Repository
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="panel" data-aos="fade-up" data-aos-delay="400">
-            <h2 class="section-title">Technical Scope</h2>
+        <section class="panel" data-aos="fade-up" data-aos-delay="350">
+            <h2 class="section-title">Highlights</h2>
+            <ul class="skill-list">
+                <li><span class="emphasis">End-to-end license flow</span>: challenge request, signed response, and local signature verification.</li>
+                <li><span class="emphasis">Hardware binding</span>: first successful activation binds the license to a hardware fingerprint (HWID).</li>
+                <li><span class="emphasis">Startup protections</span>: anti-debug checks and in-memory <code>.text</code> integrity validation vs. the on-disk image.</li>
+                <li><span class="emphasis">Virtualized execution pipeline</span>: a small DSL/compiler, bytecode encoding, and encrypted bytecode executed by a host-callback VM.</li>
+                <li><span class="emphasis">Protected feature gating</span>: unlocks an ASCII donut animation only after successful validation.</li>
+                <li><span class="emphasis">Interactive diagnostics console</span>: demonstrates each stage (startup checks, VM, full DRM journey) independently.</li>
+            </ul>
+        </section>
+
+        <section class="panel" data-aos="fade-up" data-aos-delay="450">
+            <h2 class="section-title">High-Level Architecture</h2>
             <div class="tech-grid">
                 <div class="tech-category">
-                    <h4>C++ Client</h4>
+                    <h4>C++ Client (Windows)</h4>
                     <ul class="skill-list">
-                        <li>License request and response handling</li>
-                        <li>Session token processing</li>
-                        <li>Local integrity and startup checks</li>
-                        <li>Error code and fallback flow management</li>
+                        <li>Collects HWID</li>
+                        <li>Generates nonce + timestamp</li>
+                        <li>Calls <code>POST /validate</code></li>
+                        <li>Verifies signature using <code>public.pem</code></li>
+                        <li>Runs anti-debug + integrity checks before unlocking protected logic</li>
                     </ul>
                 </div>
                 <div class="tech-category">
-                    <h4>Python Server</h4>
+                    <h4>Python License Server (Flask)</h4>
                     <ul class="skill-list">
-                        <li>License validation endpoint logic</li>
-                        <li>Request parsing and structured responses</li>
-                        <li>Token/session lifecycle design</li>
-                        <li>Logging and audit-friendly output</li>
+                        <li>Validates request fields + timestamp freshness</li>
+                        <li>Checks license expiry / active status</li>
+                        <li>Enforces HWID bind rules</li>
+                        <li>Signs canonical JSON payload and returns <code>{data, signature}</code></li>
+                        <li>Uses SQLite as a simple license store</li>
                     </ul>
                 </div>
                 <div class="tech-category">
-                    <h4>Engineering Focus</h4>
+                    <h4>Validation Flow</h4>
                     <ul class="skill-list">
-                        <li>Protocol design between native and backend systems</li>
-                        <li>Threat-model inspired design decisions</li>
-                        <li>Defensive programming and validation paths</li>
-                        <li>Separation of concerns between client and service</li>
+                        <li>Client sends: <code>{license_key, hardware_id, nonce, timestamp}</code></li>
+                        <li>Server responds: <code>{data, signature}</code> (signed)</li>
+                        <li>Client verifies: signature + nonce match + status</li>
+                        <li>Protected VM payload executes only on successful checks</li>
                     </ul>
                 </div>
             </div>
@@ -117,26 +141,30 @@
             <h2 class="section-title">What This Demonstrates</h2>
             <div class="features-grid">
                 <div class="feature-item">
-                    <h4>Multi-Language Architecture</h4>
-                    <p>Designed and connected a native C++ application with a Python server to model real-world software protection flows.</p>
+                    <h4>Software Protection Fundamentals</h4>
+                    <p>Explored licensing, payload signing, anti-replay basics (nonce/timestamp), and local verification patterns.</p>
                 </div>
                 <div class="feature-item">
-                    <h4>Systems-Level Thinking</h4>
-                    <p>Worked with stateful validation, session lifecycle concerns, and defensive checks typical for distributed systems.</p>
+                    <h4>Systems + Security Mindset</h4>
+                    <p>Built defensive checks for process environment and code integrity, and designed clear failure behavior.</p>
                 </div>
                 <div class="feature-item">
-                    <h4>Security Awareness</h4>
-                    <p>Applied practical security concepts like strict input validation, bounded trust, and clear failure behavior.</p>
+                    <h4>VM / Obfuscation Concepts</h4>
+                    <p>Implemented a small DSL-to-bytecode pipeline with encrypted bytecode executed by a custom VM to gate protected logic.</p>
                 </div>
                 <div class="feature-item">
-                    <h4>Protocol Design</h4>
-                    <p>Defined predictable request/response contracts that make client and server behaviors easier to test and evolve.</p>
+                    <h4>Tooling + Build Engineering</h4>
+                    <p>Used CMake with vcpkg (curl, OpenSSL, nlohmann-json) and a Python server stack (Flask, cryptography).</p>
                 </div>
             </div>
         </section>
 
         <section class="panel" data-aos="fade-up" data-aos-delay="800">
             <h2 class="section-title">Project Notes</h2>
+            <p class="project-description">
+                This is a <span class="emphasis">learning-focused</span> project meant for academic and defensive research.
+                It is <span class="emphasis">not</span> production DRM and is not intended to be used as a sole protection layer for commercial software.
+            </p>
             <div class="project-links-section">
                 <a href="../" class="button secondary-button">
                     <span class="button-icon">←</span>
@@ -155,7 +183,7 @@
             <a href="../" class="link">Projects</a>
             <a href="../../assets/img/ObiVerheyenCV.pdf" class="link" download="ObiVerheyenCV.pdf">Get CV</a>
         </nav>
-        <p>&copy; 2025 Obi Verheyen</p>
+        <p>&copy; 2026 Obi Verheyen</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
