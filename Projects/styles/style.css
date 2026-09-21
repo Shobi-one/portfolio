@@ -35,14 +35,9 @@
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
   position: relative;
-}
-
-.project-card:hover {
-  background: var(--hover-bg);
-  transform: translate(0.1em, 0.1em);
-  box-shadow: 0.15em 0.15em 0 var(--primary);
+  cursor: pointer;
 }
 
 .project-card-link {
@@ -55,6 +50,21 @@
 .project-card.featured {
   border: 0.3em solid var(--primary);
   box-shadow: 0.4em 0.4em 0 var(--primary);
+}
+
+.project-card:hover {
+  background: #eaeaea;
+  transform: translate(0.1em, 0.1em);
+  box-shadow: 0.15em 0.15em 0 var(--primary);
+}
+
+[data-theme="dark"] .project-card:hover {
+  background: var(--bg);
+}
+
+.project-card:active {
+  transform: translate(0.4em, 0.4em);
+  box-shadow: none;
 }
 
 .project-header {

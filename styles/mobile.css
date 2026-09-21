@@ -786,7 +786,7 @@ body.menu-open .hamburger-menu {
   filter: none;
 }
 
-[data-theme="dark"] .card-mini:hover img, .link:hover img {
+[data-theme="dark"] .card-mini:hover img {
   filter: none; /* back to normal colors */
 }
 
@@ -807,6 +807,12 @@ body.menu-open .hamburger-menu {
   background: #eaeaea;
   transform: translate(0.1em, 0.1em);
   box-shadow: 0.15em 0.15em 0 var(--primary);
+}
+
+[data-theme="dark"] #menu-items a:hover,
+[data-theme="dark"] #menu-items button:hover {
+  background: var(--bg);
+  color: var(--primary);
 }
 
 #menu-items a:active,
