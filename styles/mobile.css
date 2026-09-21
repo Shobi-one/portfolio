@@ -940,3 +940,673 @@ body.menu-open .hamburger-menu {
     padding: 0.75em 1.5em;
   }
 }
+
+/* Projects listing: zero-specificity scopes preserve the original cascade. */
+/* Section Styling */
+:where(.projects-page) .projects-section,
+:where(.projects-page) .academic-section {
+  margin: 4em 0;
+  padding: 0;
+}
+
+:where(.projects-page) .projects-section .section-title,
+:where(.projects-page) .academic-section .section-title {
+  margin-bottom: 2em;
+  margin-top: 0;
+}
+
+/* Introduction text styling */
+:where(.projects-page) .intro-text {
+  font-size: 1.3em;
+  line-height: 1.6;
+  margin: 1.5em 0;
+  color: var(--primary);
+  text-align: center;
+}
+
+/* Projects Grid */
+:where(.projects-page) .projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4em;
+  margin: 2em 0;
+}
+
+/* Project Cards */
+:where(.projects-page) .project-card {
+  background: var(--card-bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+:where(.projects-page) .project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+:where(.projects-page) .project-card.featured {
+  border: 0.3em solid var(--primary);
+  box-shadow: 0.4em 0.4em 0 var(--primary);
+}
+
+:where(.projects-page) .project-card:hover {
+  background: #eaeaea;
+  transform: translate(0.1em, 0.1em);
+  box-shadow: 0.15em 0.15em 0 var(--primary);
+}
+
+[data-theme="dark"] :where(.projects-page) .project-card:hover {
+  background: var(--bg);
+}
+
+:where(.projects-page) .project-card:active {
+  transform: translate(0.4em, 0.4em);
+  box-shadow: none;
+}
+
+:where(.projects-page) .project-header {
+  position: relative;
+  overflow: hidden;
+}
+
+:where(.projects-page) .project-image {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+:where(.projects-page) .main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+:where(.projects-page) .project-card:hover .main-image {
+  transform: scale(1.05);
+}
+
+:where(.projects-page) .project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+:where(.projects-page) .project-overlay-text {
+  font-family: var(--font-accent);
+  font-size: 1.5em;
+  color: var(--card-bg);
+  text-align: center;
+  padding: 1em 2em;
+  background: var(--primary);
+  border-radius: var(--border-radius);
+  border: 0.2em solid var(--primary);
+  transition: all 0.3s ease;
+}
+
+:where(.projects-page) .project-badge {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background: var(--primary);
+  color: var(--card-bg);
+  padding: 0.5em 1em;
+  border-radius: var(--border-radius);
+  font-family: var(--font-accent);
+  font-size: 0.9em;
+  font-weight: 600;
+  z-index: 10;
+}
+
+:where(.projects-page) .project-content {
+  padding: 1em;
+}
+
+:where(.projects-page) .project-title {
+  font-family: var(--font-accent);
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-bottom: 0.6em;
+  color: var(--primary);
+  text-align: center;
+}
+
+:where(.projects-page) .project-description {
+  font-size: 1em;
+  line-height: 1.4;
+  margin-bottom: 0.8em;
+  color: var(--primary);
+  opacity: 0.95;
+}
+
+:where(.projects-page) .project-gallery {
+  display: flex;
+  gap: 1em;
+  overflow-x: auto;
+  padding: 1em 0;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+:where(.projects-page) .project-gallery a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:where(.projects-page) .project-gallery img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border: var(--border);
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+:where(.projects-page) .project-gallery img:hover {
+  transform: scale(1.1);
+  box-shadow: 0.2em 0.2em 0 var(--primary);
+}
+
+/* Academic Projects */
+:where(.projects-page) .academic-projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3em;
+  margin: 2em 0;
+}
+
+:where(.projects-page) .academic-card {
+  background: var(--card-bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+:where(.projects-page) .academic-card:hover {
+  transform: translateY(-0.3em);
+  box-shadow: 0.3em 0.3em 0 var(--primary);
+}
+
+:where(.projects-page) .academic-content {
+  padding: 2.5em;
+}
+
+:where(.projects-page) .academic-title {
+  font-family: var(--font-title);
+  font-size: 1.5em;
+  font-weight: 300;
+  margin-bottom: 1em;
+  color: var(--primary);
+}
+
+:where(.projects-page) .academic-description {
+  font-size: 1.1em;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  color: var(--primary);
+  opacity: 0.9;
+}
+
+:where(.projects-page) .academic-link {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  background: var(--primary);
+  color: var(--card-bg);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-family: var(--font-accent);
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  border: 0.2em solid var(--primary);
+}
+
+:where(.projects-page) .academic-link:hover {
+  background: transparent;
+  color: var(--primary);
+  transform: scale(1.05);
+}
+
+/* Section Titles - using existing mobile.css styles */
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  :where(.projects-page) .projects-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4em;
+  }
+
+  :where(.projects-page) .academic-projects {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em;
+  }
+
+  :where(.projects-page) .project-image {
+    height: 200px;
+  }
+
+
+  :where(.projects-page) .hero-description {
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 1024px) {
+  :where(.projects-page) .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+  }
+
+  :where(.projects-page) .academic-projects {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
+  }
+
+  :where(.projects-page) .project-image {
+    height: 240px;
+  }
+
+  :where(.projects-page) .section-title {
+    font-size: 3em;
+  }
+}
+
+@media (min-width: 1200px) {
+  :where(.projects-page) .projects-grid {
+    max-width: 1400px;
+    margin: 3em auto;
+    padding: 0 1em;
+  }
+
+  :where(.projects-page) .academic-projects {
+    max-width: 1200px;
+    margin: 3em auto;
+  }
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] :where(.projects-page) .project-overlay {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+[data-theme="dark"] :where(.projects-page) .academic-card {
+  background: var(--bg);
+}
+
+/* Fix image inversion in dark mode for project images */
+[data-theme="dark"] :where(.projects-page) .main-image,
+[data-theme="dark"] :where(.projects-page) .project-gallery img {
+  filter: none !important;
+}
+
+/* Animation Enhancements */
+:where(.projects-page) .project-card,
+:where(.projects-page) .academic-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar Styling */
+:where(.projects-page) .project-gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+:where(.projects-page) .project-gallery::-webkit-scrollbar-track {
+  background: var(--bg);
+  border-radius: 4px;
+}
+
+:where(.projects-page) .project-gallery::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+:where(.projects-page) .project-gallery::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+  opacity: 0.8;
+}
+
+/* Focus States for Accessibility */
+:where(.projects-page) .project-card-link:focus,
+:where(.projects-page) .academic-link:focus {
+  outline: 0.2em solid var(--primary);
+  outline-offset: 0.2em;
+}
+
+/* Print Styles */
+@media print {
+  :where(.projects-page) .project-overlay,
+  :where(.projects-page) .project-badge {
+    display: none;
+  }
+
+  :where(.projects-page) .project-card,
+  :where(.projects-page) .academic-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 0.1em solid #000;
+  }
+}
+
+/* Project detail pages: zero-specificity scopes preserve the original cascade. */
+/* Goodnight Project Page - Portfolio Style */
+
+/* Project Hero Section */
+:where(.project-detail-page) .project-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+    margin: 2em 0;
+}
+
+:where(.project-detail-page) .project-image {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+:where(.project-detail-page) .project-image:hover {
+    transform: translateY(-0.3em);
+    box-shadow: 0.3em 0.3em 0 var(--primary);
+}
+
+:where(.project-detail-page) .main-screenshot {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+:where(.project-detail-page) .project-links {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    align-items: flex-end;
+}
+
+:where(.project-detail-page) .project-info {
+    text-align: center;
+    max-width: 800px;
+}
+
+:where(.project-detail-page) .project-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 1.5em 0;
+    color: var(--primary);
+}
+
+/* Tech Grid */
+:where(.project-detail-page) .tech-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    margin: 2em 0;
+}
+
+:where(.project-detail-page) .tech-category {
+    background: var(--card-bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 2em;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+:where(.project-detail-page) .tech-category:hover {
+    transform: translateY(-0.2em);
+    box-shadow: 0.2em 0.2em 0 var(--primary);
+}
+
+:where(.project-detail-page) .tech-category h4 {
+    font-family: var(--font-accent);
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+    color: var(--primary);
+    text-align: center;
+}
+
+/* Features Grid */
+:where(.project-detail-page) .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    margin: 2em 0;
+}
+
+:where(.project-detail-page) .feature-item {
+    background: var(--card-bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 2em;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+:where(.project-detail-page) .feature-item:hover {
+    transform: translateY(-0.2em);
+    box-shadow: 0.2em 0.2em 0 var(--primary);
+}
+
+:where(.project-detail-page) .feature-item h4 {
+    font-family: var(--font-accent);
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 1em;
+    color: var(--primary);
+}
+
+:where(.project-detail-page) .feature-item p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: var(--primary);
+    opacity: 0.9;
+}
+
+/* Gallery Styles */
+:where(.project-detail-page) .gallery-container {
+    margin: 2em 0;
+}
+
+:where(.project-detail-page) .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+}
+
+:where(.project-detail-page) .gallery-item {
+    position: relative;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+:where(.project-detail-page) .gallery-item:hover {
+    transform: translateY(-0.2em);
+    box-shadow: 0.2em 0.2em 0 var(--primary);
+}
+
+:where(.project-detail-page) .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+:where(.project-detail-page) .gallery-item:hover img {
+    transform: scale(1.02);
+}
+
+:where(.project-detail-page) .gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+:where(.project-detail-page) .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+:where(.project-detail-page) .gallery-text {
+    color: var(--card-bg);
+    font-family: var(--font-accent);
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Project Links Section */
+:where(.project-detail-page) .project-links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+    margin: 2em 0;
+}
+
+:where(.project-detail-page) .button-icon {
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    :where(.project-detail-page) .project-hero {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3em;
+    }
+
+    :where(.project-detail-page) .project-info {
+        text-align: left;
+        flex: 1;
+    }
+
+    :where(.project-detail-page) .project-image {
+        flex: 1;
+        max-width: 500px;
+    }
+
+    :where(.project-detail-page) .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    :where(.project-detail-page) .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    :where(.project-detail-page) .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    :where(.project-detail-page) .project-links-section {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    :where(.project-detail-page) .project-hero {
+        gap: 4em;
+    }
+
+    :where(.project-detail-page) .project-description {
+        font-size: 1.3em;
+    }
+
+    :where(.project-detail-page) .tech-category {
+        padding: 2.5em;
+    }
+
+    :where(.project-detail-page) .feature-item {
+        padding: 2.5em;
+    }
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] :where(.project-detail-page) .gallery-overlay {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+[data-theme="dark"] :where(.project-detail-page) .main-screenshot,
+[data-theme="dark"] :where(.project-detail-page) .gallery-item img {
+  filter: none !important;
+}
+
+
+/* Animation Enhancements */
+:where(.project-detail-page) .project-hero,
+:where(.project-detail-page) .tech-category,
+:where(.project-detail-page) .feature-item,
+:where(.project-detail-page) .gallery-item {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* fadeInUp is shared with the projects listing above. */
+
+/* Print Styles */
+@media print {
+    :where(.project-detail-page) .gallery-overlay,
+    :where(.project-detail-page) .project-links {
+        display: none;
+    }
+
+    :where(.project-detail-page) .project-image,
+    :where(.project-detail-page) .tech-category,
+    :where(.project-detail-page) .feature-item,
+    :where(.project-detail-page) .gallery-item {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 0.1em solid #000;
+    }
+}
